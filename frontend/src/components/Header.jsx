@@ -5,7 +5,6 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
@@ -24,34 +23,132 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import Dropdown from "./Dropdown";
+
+const navItems = [
+  {
+    name: "WHAT WE DO",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    dropdownItems: [
+      {
+        name: "Poverty Alleviation",
+        description: "Get a better understanding of your traffic",
+        href: "#",
+        icon: ChartPieIcon,
+      },
+      {
+        name: "Humankind",
+        description: "Speak directly to your customers",
+        href: "#",
+        icon: CursorArrowRaysIcon,
+      },
+      {
+        name: "Women and children health",
+        description: "Your customers’ data will be safe and secure",
+        href: "#",
+        icon: FingerPrintIcon,
+      },
+      {
+        name: "Womankind",
+        description: "Connect with third-party tools",
+        href: "#",
+        icon: SquaresPlusIcon,
+      },
+      {
+        name: "Emergencies",
+        description: "Build strategic funnels that will convert",
+        href: "#",
+        icon: ArrowPathIcon,
+      },
+    ],
+  },
+  {
+    name: "HOW YOU CAN HELP",
+    description: "Speak directly to your customers",
+    href: "#",
+    dropdownItems: [
+      {
+        name: "Donate",
+        description: "Get a better understanding of your traffic",
+        href: "#",
+        icon: ChartPieIcon,
+      },
+      {
+        name: "Volunteer",
+        description: "Speak directly to your customers",
+        href: "#",
+        icon: CursorArrowRaysIcon,
+      },
+    ],
+  },
+  {
+    name: "EMERGENCIES",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    dropdownItems: [
+      {
+        name: "Syria Crisis",
+        description: "Get a better understanding of your traffic",
+        href: "#",
+        icon: ChartPieIcon,
+      },
+    ],
+  },
+  {
+    name: "ABOUT US",
+    description: "Connect with third-party tools",
+    href: "#",
+    dropdownItems: [
+      {
+        name: "Who we are",
+        description: "Get a better understanding of your traffic",
+        href: "#",
+        icon: ChartPieIcon,
+      },
+      {
+        name: "Volunteer",
+        description: "Speak directly to your customers",
+        href: "#",
+        icon: CursorArrowRaysIcon,
+      },
+      {
+        name: "Who we work with",
+        description: "Your customers’ data will be safe and secure",
+        href: "#",
+        icon: FingerPrintIcon,
+      },
+    ],
+  },
+];
 
 const products = [
   {
-    name: "Analytics",
+    name: "Poverty Alleviation",
     description: "Get a better understanding of your traffic",
     href: "#",
     icon: ChartPieIcon,
   },
   {
-    name: "Engagement",
+    name: "Humankind",
     description: "Speak directly to your customers",
     href: "#",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "Security",
+    name: "Women and children health",
     description: "Your customers’ data will be safe and secure",
     href: "#",
     icon: FingerPrintIcon,
   },
   {
-    name: "Integrations",
+    name: "Womankind",
     description: "Connect with third-party tools",
     href: "#",
     icon: SquaresPlusIcon,
   },
   {
-    name: "Automations",
+    name: "Emergencies",
     description: "Build strategic funnels that will convert",
     href: "#",
     icon: ArrowPathIcon,
@@ -63,7 +160,6 @@ const callsToAction = [
 ];
 
 export default function Header() {
-  const [showPopover, setShowPopover] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -89,82 +185,9 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Popover
-            onMouseOver={() => {
-              setShowPopover(true);
-            }}
-            onMouseOut={() => {
-              setShowPopover(false);
-            }}
-            className="relative"
-          >
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
-              WHAT WE DO
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="size-5 flex-none text-gray-400"
-              />
-            </PopoverButton>
-
-            {showPopover && (
-              <PopoverPanel
-                static={true}
-                transition
-                className="absolute -left-8 top-full z-10 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="p-4">
-                  {products.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
-                    >
-                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          aria-hidden="true"
-                          className="size-6 text-gray-600 group-hover:text-indigo-600"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                    >
-                      <item.icon
-                        aria-hidden="true"
-                        className="size-5 flex-none text-gray-400"
-                      />
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </PopoverPanel>
-            )}
-          </Popover>
-
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            HOW YOU CAN HELP
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            EMERGENCIES
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            ABOUT US
-          </a>
+          {navItems.map((navItem, index) => (
+            <Dropdown navItem={navItem} key={index} />
+          ))}
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
