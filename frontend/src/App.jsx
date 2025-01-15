@@ -1,11 +1,13 @@
 import "./App.css";
+import { Route, Routes } from "react-router";
+
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-black">
-        The Humankind Charity
-      </h1>
+      <Header />
+      <Routes></Routes>
     </>
   );
 }
