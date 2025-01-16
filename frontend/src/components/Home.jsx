@@ -9,7 +9,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-window flex flex-col justify-center text-center">
+    <div className="w-window flex flex-col justify-center text-center mb-10">
       <h1 className="h-64 text-4xl md:text-7xl font-semibold bg-black h-auto py-48 py-2">
         WILL YOU STAND WITH HUMAN<span className="text-red-700">KIND</span>?
       </h1>
@@ -26,8 +26,7 @@ export default function Home() {
         hope to those who need it most.
       </p>
       <h2 className="h-64 text-3xl md:text-5xl font-semibold mx-2 my-5 h-auto py-2 text-black">
-        HOW YOU CAN STAND WITH HUMAN<span className="text-red-700">KIND</span>{" "}
-        CHARITY
+        HOW YOU CAN STAND WITH HUMAN<span className="text-red-700">KIND</span>
       </h2>
       <div className="grid grid-cols-1 gap-x-14 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mx-20">
         {homePageLinks.map((pageLink, index) => (

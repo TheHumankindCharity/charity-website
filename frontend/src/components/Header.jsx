@@ -21,6 +21,7 @@ import {
   ChevronDownIcon,
   PhoneIcon,
   PlayCircleIcon,
+  MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import Dropdown from "./Dropdown";
 
@@ -165,34 +166,43 @@ export default function Header() {
     <header className="fixed w-screen bg-white border-b border-black">
       <nav
         aria-label="Global"
-        className="hidden lg:flex py-0 mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="hidden lg:flex py-0 mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8"
       >
-        <div className="hidden lg:block flex lg:flex-1">
+        <div className="hidden lg:flex flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt=""
               src="/images/charity-logo-alt.png"
-              className="h-8 w-auto"
+              className="h-14 w-auto"
             />
           </a>
         </div>
-        <div className="lg:flex lg:flex-1 lg:justify-center">
+        <div className="lg:flex lg:flex-1 lg:justify-center border border-black grow">
           <Input
-            className="hidden border border-black lg:block"
+            className="hidden  lg:block flex-1 text-black px-1"
             name="full_name"
             type="text"
           />
+          <a href="#">
+            <MagnifyingGlassIcon
+              aria-hidden="true"
+              className="h-7 flex-none lg:flex border-l border-black text-black bg-red-700"
+            />
+          </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a
+            href="#"
+            className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
+          >
             DONATE
           </a>
         </div>
       </nav>
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between lg:justify-center p-6 lg:px-8"
+        className="mx-auto flex max-w-8xl items-center justify-between lg:justify-center p-6 lg:px-8 border-t border-black"
       >
         <div className="lg:hidden flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
@@ -205,15 +215,18 @@ export default function Header() {
           </a>
         </div>
         <div className="flex lg:hidden">
-          <div className="lg:flex lg:flex-1 lg:justify-end mr-5">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <div className="lg:flex lg:flex-1 lg:justify-end mr-2">
+            <a
+              href="#"
+              className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-white hover:bg-red-500"
+            >
               DONATE
             </a>
           </div>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 mx-1"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
