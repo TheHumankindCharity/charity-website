@@ -5,9 +5,8 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  PopoverButton,
   PopoverGroup,
-  PopoverPanel,
+  Input,
 } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -163,18 +162,54 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="fixed w-screen bg-white border-b border-black">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="hidden lg:flex py-0 mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
-        <div className="flex lg:flex-1">
+        <div className="hidden lg:block flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img alt="" src="/images/charity-logo.png" className="h-8 w-auto" />
+            <img
+              alt=""
+              src="/images/charity-logo-alt.png"
+              className="h-8 w-auto"
+            />
+          </a>
+        </div>
+        <div className="lg:flex lg:flex-1 lg:justify-center">
+          <Input
+            className="hidden border border-black lg:block"
+            name="full_name"
+            type="text"
+          />
+        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+            DONATE
+          </a>
+        </div>
+      </nav>
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between lg:justify-center p-6 lg:px-8"
+      >
+        <div className="lg:hidden flex lg:flex-1">
+          <a href="#" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
+            <img
+              alt=""
+              src="/images/charity-logo-alt.png"
+              className="h-8 w-auto"
+            />
           </a>
         </div>
         <div className="flex lg:hidden">
+          <div className="lg:flex lg:flex-1 lg:justify-end mr-5">
+            <a href="#" className="text-sm/6 font-semibold text-gray-900">
+              DONATE
+            </a>
+          </div>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -189,11 +224,6 @@ export default function Header() {
             <Dropdown navItem={navItem} key={index} />
           ))}
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            DONATE <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
       </nav>
       <Dialog
         open={mobileMenuOpen}
