@@ -67,7 +67,7 @@ const navItems = [
   {
     name: "HOW YOU CAN HELP",
     description: "Speak directly to your customers",
-    href: "#",
+    href: "/how-you-can-help",
     dropdownItems: [
       {
         name: "Donate",

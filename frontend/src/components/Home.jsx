@@ -1,6 +1,7 @@
-import PageAbout from "./templates/PageAbout";
-import PageLinks from "./templates/PageLinks";
 import PageTitle from "./templates/PageTitle";
+import PageSubTitle from "./templates/PageSubTitle";
+import PageText from "./templates/PageText";
+import PageLinks from "./templates/PageLinks";
 
 export default function Home() {
   const homePageText =
@@ -19,9 +20,10 @@ export default function Home() {
       <PageTitle>
         WILL YOU STAND WITH HUMAN<span className="text-red-700">KIND</span>?
       </PageTitle>
-      <PageAbout pageText={homePageText}>
+      <PageSubTitle>
         WELCOME TO THE HUMAN<span className="text-red-700">KIND</span> CHARITY
-      </PageAbout>
+      </PageSubTitle>
+      <PageText>{homePageText}</PageText>
       <PageLinks pageLinksList={homePageLinks}>
         HOW YOU CAN STAND WITH HUMAN<span className="text-red-700">KIND</span>
       </PageLinks>
