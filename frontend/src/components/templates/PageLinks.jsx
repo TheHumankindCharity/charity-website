@@ -1,23 +1,8 @@
-export default function PageTemplate({
-  pageTitle,
-  pageSubTitle,
-  pageText,
-  pageListTitle,
-  pageLinksList,
-}) {
+export default function PageLinks({ children, pageLinksList }) {
   return (
-    <div className="w-window flex flex-col justify-center text-center mb-10">
-      <h1 className="offset text-4xl md:text-7xl font-semibold bg-black h-auto py-36 bg-[url('/images/stock-charity.jpg')] bg-cover">
-        {pageTitle}
-      </h1>
-      <h2 className="h-64 text-3xl md:text-4xl font-semibold mx-2 my-5 h-auto py-2 text-black">
-        {pageSubTitle}
-      </h2>
-      <p className="text-black text-justify mx-14 md:mx-32 lg:mx-80 mb-7">
-        {pageText}
-      </p>
+    <>
       <h2 className="h-64 text-3xl md:text-5xl font-semibold mx-2 my-5 h-auto py-2 text-black">
-        {pageListTitle}
+        {children}
       </h2>
       <div className="grid grid-cols-1 gap-x-14 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mx-20">
         {pageLinksList.map((pageLink, index) => (
@@ -41,6 +26,6 @@ export default function PageTemplate({
           </a>
         ))}
       </div>
-    </div>
+    </>
   );
 }

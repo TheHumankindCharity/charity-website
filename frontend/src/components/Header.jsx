@@ -220,7 +220,7 @@ export default function Header() {
           <div className="lg:flex lg:flex-1 lg:justify-end mr-2">
             <a
               href="#"
-              className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-white hover:bg-red-500"
+              className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
             >
               DONATE
             </a>
