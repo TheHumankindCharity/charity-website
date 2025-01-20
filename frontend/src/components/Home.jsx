@@ -13,10 +13,10 @@ export default function Home() {
       <h1 className="h-64 text-4xl md:text-7xl font-semibold bg-black h-auto py-48 py-2">
         WILL YOU STAND WITH HUMAN<span className="text-red-700">KIND</span>?
       </h1>
-      <h2 className="h-64 text-4xl md:text-5xl font-semibold mx-2 my-5 h-auto py-2 text-black">
+      <h2 className="h-64 text-3xl md:text-4xl font-semibold mx-2 my-5 h-auto py-2 text-black">
         WELCOME TO THE HUMAN<span className="text-red-700">KIND</span> CHARITY
       </h2>
-      <p className="text-black text-justify mx-14 md:mx-32 lg:mx-60 mb-7">
+      <p className="text-black text-justify mx-14 md:mx-32 lg:mx-80 mb-7">
         At The Humankind Charity, we believe kindness is the key to a better
         world. United by compassion, we stand together as one humankind,
         offering hope, help, and solidarity to those in need. Through your
@@ -40,11 +40,11 @@ export default function Home() {
               className="aspect-square w-full rounded-t-lg border border-black bg-gray-200 object-cover xl:aspect-[7/8] mb-0"
             />
 
-            <h3 class="text-lg font-semibold rounded-b-lg border border-black min-w-32 text-center relative overflow-hidden text-black group-hover:text-white transition-colors duration-300 group cursor-pointer mt-0 z-[-1]">
+            <h3 className="text-lg font-semibold rounded-b-lg border border-black min-w-32 text-center relative overflow-hidden text-black group-hover:text-white transition-colors duration-300 group cursor-pointer mt-0 z-[-1]">
               {pageLink.name}
               <span
                 aria-hidden="true"
-                class="bg-red-700 absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 z-[-1]"
+                className="bg-red-700 absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 z-[-1]"
               ></span>
             </h3>
           </a>

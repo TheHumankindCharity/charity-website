@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import {
   ChevronDownIcon,
@@ -12,6 +13,7 @@ const callsToAction = [
 ];
 
 export default function Dropdown({ navItem }) {
+  let navigate = useNavigate();
   const [showPopover, setShowPopover] = useState(false);
 
   return (
@@ -24,7 +26,13 @@ export default function Dropdown({ navItem }) {
       }}
       className="relative"
     >
-      <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+      <PopoverButton
+        onClick={() => {
+          navigate(navItem.href);
+          setShowPopover(false);
+        }}
+        className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900"
+      >
         {navItem.name}
         <ChevronDownIcon
           aria-hidden="true"

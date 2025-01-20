@@ -24,12 +24,13 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import Dropdown from "./Dropdown";
+import { Link } from "react-router";
 
 const navItems = [
   {
     name: "WHAT WE DO",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    href: "/what-we-do",
     dropdownItems: [
       {
         name: "Poverty Alleviation",
@@ -169,29 +170,30 @@ export default function Header() {
         className="hidden lg:flex py-0 mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8"
       >
         <div className="hidden lg:flex flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt=""
               src="/images/charity-logo-alt.png"
               className="h-14 w-auto"
             />
-          </a>
+          </Link>
         </div>
-        <div className="lg:flex lg:flex-1 lg:justify-center border border-black grow">
-          <Input
-            className="hidden  lg:block flex-1 text-black px-1"
-            name="full_name"
-            type="text"
-          />
-          <a href="#">
-            <MagnifyingGlassIcon
-              aria-hidden="true"
-              className="h-7 flex-none lg:flex border-l border-black text-black bg-red-700"
-            />
-          </a>
-        </div>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="lg:flex lg:flex-1 lg:justify-center border border-black grow">
+            <Input
+              className="hidden  lg:block flex-1 text-black px-1 focus:outline-none"
+              name="full_name"
+              type="text"
+            />
+            <a href="#">
+              <MagnifyingGlassIcon
+                aria-hidden="true"
+                className="h-3/4 flex-none lg:flex border border-black text-black bg-white hover:border-red-500 hover:text-red-700 m-2 rounded"
+              />
+            </a>
+          </div>
           <a
             href="#"
             className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
