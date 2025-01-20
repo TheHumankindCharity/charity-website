@@ -1,8 +1,7 @@
-import PageAbout from "./templates/PageText";
-import PageLinks from "./templates/PageLinks";
 import PageTitle from "./templates/PageTitle";
 import PageSubTitle from "./templates/PageSubTitle";
 import PageText from "./templates/PageText";
+import PageLinks from "./templates/PageLinks";
 
 export default function HowYouCanHelp() {
   const howYouCanHelpText =
@@ -13,8 +12,6 @@ export default function HowYouCanHelp() {
     { name: "EVENTS AND FUNDRAISING", href: "#", img: "" },
     { name: "BECOME A PARTNER", href: "#", img: "" },
   ];
-  const volunteerText =
-    'Volunteering with The Humankind Charity is more than an act of giving, it is an opportunity to transform lives, including your own. By dedicating your time and effort to support those in need, you bring hope and relief to vulnerable families, children, and communities. At the same time, volunteering helps you grow as a person, nurturing qualities like compassion, resilience, and gratitude. Every small action, from preparing aid packages to raising awareness, leaves a lasting impact on the lives we serve and strengthens the bond between humanity and kindness.\nVolunteering is significant not just in this life but also in the Akhira. It builds your character and places you among those who play a meaningful role in the ummah. As the Prophet Muhammad ﷺ said, "The best of people are those who are most beneficial to others". Through acts of service, you fulfill a higher purpose, earning rewards both in this world and the next, while becoming a beacon of hope and compassion for others.';
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
@@ -39,14 +36,16 @@ export default function HowYouCanHelp() {
         <br />
         Volunteering is significant not just in this life but also in the
         Akhira. It builds your character and places you among those who play a
-        meaningful role in the ummah. As the Prophet Muhammad ﷺ said, "The best
-        of people are those who are most beneficial to others". Through acts of
-        service, you fulfill a higher purpose, earning rewards both in this
-        world and the next, while becoming a beacon of hope and compassion for
-        others.
+        meaningful role in the ummah. As the Prophet Muhammad ﷺ said,{" "}
+        <span className="font-semibold">
+          "The best of people are those who are most beneficial to others"
+        </span>
+        . Through acts of service, you fulfill a higher purpose, earning rewards
+        both in this world and the next, while becoming a beacon of hope and
+        compassion for others.
       </PageText>
       <PageSubTitle>BECOME A VOLUNTEER</PageSubTitle>
-      <video className="rounded-lg lg:mx-40 mx-20" controls>
+      <video className="rounded-lg mx-12 md:mx-20 lg:mx-48" controls>
         <source
           src="https://docs.material-tailwind.com/demo.mp4"
           type="video/mp4"
