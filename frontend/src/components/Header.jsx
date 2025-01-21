@@ -164,7 +164,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-screen bg-white border-b border-black">
+    <header className="fixed w-screen bg-white border-b border-black z-[1]">
       <nav
         aria-label="Global"
         className="hidden lg:flex py-0 mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8"
