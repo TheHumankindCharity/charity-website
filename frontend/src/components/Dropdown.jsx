@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import {
   ChevronDownIcon,
@@ -31,12 +31,14 @@ export default function Dropdown({ navItem }) {
           navigate(navItem.href);
           setShowPopover(false);
         }}
-        className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900"
+        className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 py-4"
       >
-        {navItem.name}
+        <span className={showPopover ? "text-red-700" : ""}>
+          {navItem.name}
+        </span>
         <ChevronDownIcon
           aria-hidden="true"
-          className="size-5 flex-none text-gray-400"
+          className="size-5 flex-none text-red-700"
         />
       </PopoverButton>
 
@@ -45,47 +47,34 @@ export default function Dropdown({ navItem }) {
           anchor="bottom start"
           static={true}
           transition
-          className="absolute top-full z-10 w-screen max-w-sm overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+          className="absolute mt-0 top-full z-10 w-screen max-w-sm overflow-hidden bg-white border-b-4 border-red-700"
         >
-          <div className="p-4">
-            {navItem.dropdownItems.map((item) => (
-              <div
-                key={item.name}
-                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
-              >
-                <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <item.icon
-                    aria-hidden="true"
-                    className="size-6 text-gray-600 group-hover:text-indigo-600"
-                  />
-                </div>
-                <div className="flex-auto">
+          <div className="grid grid-cols-7 divide-x m-8">
+            <div className="p-4 col-span-3 flex flex-col justify-start">
+              <h2 className="text-end text-4xl font-bold text-black">
+                {navItem.name}
+              </h2>
+              <div className="text-end mt-5">
+                <Link className="text-2xl text-red-700 hover:text-red-400">
+                  Discover more
+                </Link>
+              </div>
+            </div>
+            <div className="col-span-4 grid grid-rows-3 grid-cols-2 grid-flow-col px-32 border-none">
+              {navItem.dropdownItems.map((item) => (
+                <div
+                  className="relative flex items-center gap-x-2 rounded-lg p-4 text-sm/6 flex-auto"
+                  key={item.name}
+                >
                   <a
                     href={item.href}
-                    className="block font-semibold text-gray-900"
+                    className="block font-semibold text-gray-900 hover:text-red-700"
                   >
                     {item.name}
-                    <span className="absolute inset-0" />
                   </a>
-                  <p className="mt-1 text-gray-600">{item.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            {callsToAction.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-              >
-                <item.icon
-                  aria-hidden="true"
-                  className="size-5 flex-none text-gray-400"
-                />
-                {item.name}
-              </a>
-            ))}
+              ))}
+            </div>
           </div>
         </PopoverPanel>
       )}

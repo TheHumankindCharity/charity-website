@@ -9,7 +9,7 @@ export default function Footer() {
       <h2 className="h-64 text-3xl md:text-5xl font-semibold mx-2 my-5 h-auto py-2 text-black">
         YOU MIGHT BE INTERESTED IN
       </h2>
-      <div className="grid grid-cols-1 gap-x-14 gap-y-10 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mx-20">
+      <div className="grid grid-cols-1 gap-x-14 gap-y-10 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mx-32 lg:mx-80">
         {footerLinks.map((footerLink, index) => (
           <a
             key={index}

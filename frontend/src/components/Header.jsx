@@ -171,11 +171,11 @@ export default function Header() {
       >
         <div className="hidden lg:flex flex lg:flex-1">
           <Link to="/home" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">The Humankind Charity</span>
             <img
               alt=""
               src="/images/charity-logo-alt.png"
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
         </div>
@@ -204,7 +204,7 @@ export default function Header() {
       </nav>
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-8xl items-center justify-between lg:justify-center p-6 lg:px-8 border-t border-black"
+        className="mx-auto flex max-w-8xl items-center justify-between lg:justify-center p-0 lg:px-8 border-t border-black"
       >
         <div className="lg:hidden flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
@@ -212,29 +212,27 @@ export default function Header() {
             <img
               alt=""
               src="/images/charity-logo-alt.png"
-              className="h-8 w-auto"
+              className="h-14 w-auto"
             />
           </a>
         </div>
-        <div className="flex lg:hidden">
-          <div className="lg:flex lg:flex-1 lg:justify-end mr-2">
-            <a
-              href="#"
-              className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
-            >
-              DONATE
-            </a>
-          </div>
+        <div className="flex lg:hidden lg:justify-end">
+          <a
+            href="#"
+            className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
+          >
+            DONATE
+          </a>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 mx-1"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md px-2.5 text-gray-700 mx-1"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-6">
           {navItems.map((navItem, index) => (
             <Dropdown navItem={navItem} key={index} />
           ))}
