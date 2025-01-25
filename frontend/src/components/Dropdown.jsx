@@ -31,7 +31,7 @@ export default function Dropdown({ navItem }) {
           navigate(navItem.href);
           setShowPopover(false);
         }}
-        className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 py-4"
+        className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 py-4 focus:outline-none"
       >
         <span className={showPopover ? "text-red-700" : ""}>
           {navItem.name}

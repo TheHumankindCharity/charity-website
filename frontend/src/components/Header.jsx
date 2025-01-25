@@ -86,7 +86,7 @@ const navItems = [
   {
     name: "EMERGENCIES",
     description: "Your customers’ data will be safe and secure",
-    href: "#",
+    href: "/emergencies",
     dropdownItems: [
       {
         name: "Syria Crisis",
@@ -190,13 +190,13 @@ export default function Header() {
             <a href="#">
               <MagnifyingGlassIcon
                 aria-hidden="true"
-                className="h-3/4 flex-none lg:flex border border-black text-black bg-white hover:border-red-500 hover:text-red-700 m-2 rounded"
+                className="h-3/4 flex-none lg:flex border border-black text-black bg-white hover:border-[--maroon] hover:text-[--maroon] m-2 rounded"
               />
             </a>
           </div>
           <a
             href="#"
-            className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
+            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
           >
             DONATE
           </a>
@@ -219,7 +219,7 @@ export default function Header() {
         <div className="flex lg:hidden lg:justify-end">
           <a
             href="#"
-            className="text-sm/2 font-semibold bg-red-700 p-5 text-white hover:bg-red-500"
+            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
           >
             DONATE
           </a>

@@ -18,14 +18,16 @@ export default function Home() {
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle>
-        WILL YOU STAND WITH HUMAN<span className="text-red-700">KIND</span>?
+        WILL YOU STAND WITH HUMAN<span className="text-[--maroon]">KIND</span>?
       </PageTitle>
       <PageSubTitle>
-        WELCOME TO THE HUMAN<span className="text-red-700">KIND</span> CHARITY
+        WELCOME TO THE HUMAN<span className="text-[--maroon]">KIND</span>{" "}
+        CHARITY
       </PageSubTitle>
       <PageText>{homePageText}</PageText>
       <PageLinks pageLinksList={homePageLinks}>
-        HOW YOU CAN STAND WITH HUMAN<span className="text-red-700">KIND</span>
+        HOW YOU CAN STAND WITH HUMAN
+        <span className="text-[--maroon]">KIND</span>
       </PageLinks>
     </div>
   );

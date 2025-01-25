@@ -7,6 +7,7 @@ import WhatWeDo from "./components/WhatWeDo";
 import HowYouCanHelp from "./components/HowYouCanHelp";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/utils/ScrollToTop";
+import Emergencies from "./components/Emergencies";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/how-you-can-help" element={<HowYouCanHelp />} />
+        <Route path="/emergencies" element={<Emergencies />} />
       </Routes>
       <Footer />
     </>
