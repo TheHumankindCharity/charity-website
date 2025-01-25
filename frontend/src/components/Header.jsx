@@ -8,19 +8,9 @@ import {
   PopoverGroup,
   Input,
 } from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import Dropdown from "./Dropdown";
@@ -36,31 +26,26 @@ const navItems = [
         name: "Poverty Alleviation",
         description: "Get a better understanding of your traffic",
         href: "#",
-        icon: ChartPieIcon,
       },
       {
         name: "Humankind",
         description: "Speak directly to your customers",
         href: "#",
-        icon: CursorArrowRaysIcon,
       },
       {
         name: "Women and children health",
         description: "Your customers’ data will be safe and secure",
         href: "#",
-        icon: FingerPrintIcon,
       },
       {
         name: "Womankind",
         description: "Connect with third-party tools",
         href: "#",
-        icon: SquaresPlusIcon,
       },
       {
         name: "Emergencies",
         description: "Build strategic funnels that will convert",
         href: "#",
-        icon: ArrowPathIcon,
       },
     ],
   },
@@ -73,13 +58,11 @@ const navItems = [
         name: "Donate",
         description: "Get a better understanding of your traffic",
         href: "#",
-        icon: ChartPieIcon,
       },
       {
         name: "Volunteer",
         description: "Speak directly to your customers",
         href: "#",
-        icon: CursorArrowRaysIcon,
       },
     ],
   },
@@ -92,72 +75,31 @@ const navItems = [
         name: "Syria Crisis",
         description: "Get a better understanding of your traffic",
         href: "#",
-        icon: ChartPieIcon,
       },
     ],
   },
   {
     name: "ABOUT US",
     description: "Connect with third-party tools",
-    href: "#",
+    href: "/about-us",
     dropdownItems: [
       {
         name: "Who we are",
         description: "Get a better understanding of your traffic",
         href: "#",
-        icon: ChartPieIcon,
       },
       {
         name: "Volunteer",
         description: "Speak directly to your customers",
         href: "#",
-        icon: CursorArrowRaysIcon,
       },
       {
         name: "Who we work with",
         description: "Your customers’ data will be safe and secure",
         href: "#",
-        icon: FingerPrintIcon,
       },
     ],
   },
-];
-
-const products = [
-  {
-    name: "Poverty Alleviation",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Humankind",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Women and children health",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Womankind",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Emergencies",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-];
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
 ];
 
 export default function Header() {
@@ -246,11 +188,11 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/home" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                src="/images/charity-logo-alt.png"
                 className="h-8 w-auto"
               />
             </a>
@@ -260,51 +202,47 @@ export default function Header() {
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="size-6" />
+              <XMarkIcon
+                aria-hidden="true"
+                className="size-6 text-[--maroon]"
+              />
             </button>
           </div>
+          <hr className="w-window mt-4 -mx-6" />
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    WHAT WE DO
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="size-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                {navItems.map((navItem, index) => (
+                  <Disclosure key={index} as="div" className="-mx-3">
+                    <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 data-[open]:text-[--maroon]">
+                      {navItem.name}
+                      <ChevronDownIcon
+                        aria-hidden="true"
+                        className="size-5 flex-none group-data-[open]:rotate-180 text-[--maroon]"
+                      />
+                    </DisclosureButton>
+                    <DisclosurePanel className="mt-2 space-y-2">
                       <DisclosureButton
-                        key={item.name}
+                        key="discover more"
                         as="a"
-                        href={item.href}
+                        href={navItem.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                       >
-                        {item.name}
+                        Discover more
                       </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  HOW YOU CAN HELP
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  EMERGENCIES
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  ABOUT US
-                </a>
+                      {navItem.dropdownItems.map((dropdownItem) => (
+                        <DisclosureButton
+                          key={dropdownItem.name}
+                          as="a"
+                          href={dropdownItem.href}
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                        >
+                          {dropdownItem.name}
+                        </DisclosureButton>
+                      ))}
+                    </DisclosurePanel>
+                  </Disclosure>
+                ))}
               </div>
               <div className="py-6">
                 <a
