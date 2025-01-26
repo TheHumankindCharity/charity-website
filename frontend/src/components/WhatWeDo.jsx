@@ -1,7 +1,7 @@
 import PageTitle from "./templates/PageTitle";
 import PageSubTitle from "./templates/PageSubTitle";
 import PageText from "./templates/PageText";
-import PageLinks from "./templates/PageLinks";
+import PageLinksHover from "./templates/PageLinksHover";
 
 export default function WhatWeDo() {
   const whatWeDoText =
@@ -19,9 +19,9 @@ export default function WhatWeDo() {
       <PageTitle>WHAT WE DO</PageTitle>
       <PageSubTitle>THIS IS WHAT WE DO</PageSubTitle>
       <PageText>{whatWeDoText}</PageText>
-      <PageLinks pageLinksList={whatWeDoLinks}>
+      <PageLinksHover pageLinksList={whatWeDoLinks}>
         CLICK TO FIND OUT MORE
-      </PageLinks>
+      </PageLinksHover>
     </div>
   );
 }

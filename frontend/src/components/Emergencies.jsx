@@ -8,8 +8,6 @@ import CampaignSection from "./templates/CampaignSection";
 export default function Emergencies() {
   const emergenciesText =
     "Our Emergency Fund enables us to respond swiftly to crises, providing immediate relief to families and communities in need. From food and clean water to essential hygiene supplies, your contributions help save lives and bring hope to those facing unimaginable hardships. Together, we can act quickly to make a difference when it matters most.";
-  const syriaHumankindText =
-    "The people of Syria are facing overwhelming challenges as they struggle to secure necessities such as food and clean water. Through the Humankind Campaign, we are focused on addressing these critical needs by delivering essential food packages containing rice, flour, canned goods, and cooking oil to families in the most affected areas. We hope to expand our efforts to provide clean water solutions to Syria where access to safe drinking water is scarce, with the support of donations from the Humankind. Each food package delivered represents a lifeline of hope, helping to restore dignity and offer a path to survival. Your support enables us to bring much needed assistance directly to those who need it most, ensuring that no one is left behind. Together, we can make a tangible difference, giving families the opportunity to rebuild their lives, regain their strength, and take small steps toward a brighter, more sustainable future.";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle>EMERGENCIES</PageTitle>

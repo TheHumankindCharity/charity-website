@@ -20,7 +20,7 @@ export default function Footer() {
               src="https://placehold.co/600x400"
               className="aspect-square w-full rounded-full border border-black bg-gray-200 object-cover group-hover:border-red-700 xl:aspect-[7/8] mb-0"
             />
-            <h3 className="mt-4 text-lg text-black text-center font-semibold group-hover:text-red-700">
+            <h3 className="mt-4 text-lg text-black text-center font-semibold group-hover:text-red-700 transition-colors duration-300">
               {footerLink.name}
             </h3>
           </a>

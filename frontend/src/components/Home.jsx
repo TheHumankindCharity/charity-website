@@ -1,7 +1,7 @@
 import PageTitle from "./templates/PageTitle";
 import PageSubTitle from "./templates/PageSubTitle";
 import PageText from "./templates/PageText";
-import PageLinks from "./templates/PageLinks";
+import PageLinksHover from "./templates/PageLinksHover";
 
 export default function Home() {
   const homePageText =
@@ -25,10 +25,10 @@ export default function Home() {
         CHARITY
       </PageSubTitle>
       <PageText>{homePageText}</PageText>
-      <PageLinks pageLinksList={homePageLinks}>
+      <PageLinksHover pageLinksList={homePageLinks}>
         HOW YOU CAN STAND WITH HUMAN
         <span className="text-[--maroon]">KIND</span>
-      </PageLinks>
+      </PageLinksHover>
     </div>
   );
 }

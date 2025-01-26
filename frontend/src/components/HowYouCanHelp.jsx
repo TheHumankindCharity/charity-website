@@ -1,7 +1,8 @@
 import PageTitle from "./templates/PageTitle";
 import PageSubTitle from "./templates/PageSubTitle";
 import PageText from "./templates/PageText";
-import PageLinks from "./templates/PageLinks";
+import PageLinks from "./templates/PageLinksLoad";
+import PageLinksLoad from "./templates/PageLinksLoad";
 
 export default function HowYouCanHelp() {
   const howYouCanHelpText =
@@ -18,9 +19,9 @@ export default function HowYouCanHelp() {
       <PageTitle>HOW YOU CAN HELP</PageTitle>
       <PageSubTitle>HOW YOU CAN STAND WITH HUMANKIND</PageSubTitle>
       <PageText>{howYouCanHelpText}</PageText>
-      <PageLinks pageLinksList={howYouCanHelpLinks}>
+      <PageLinksLoad pageLinksList={howYouCanHelpLinks}>
         YOU CAN HELP HUMANKIND BY...
-      </PageLinks>
+      </PageLinksLoad>
       <PageSubTitle>HOW VOLUNTEERING CAN CHANGE YOUR LIFE</PageSubTitle>
       <PageText>
         Volunteering with The Humankind Charity is more than an act of giving,
