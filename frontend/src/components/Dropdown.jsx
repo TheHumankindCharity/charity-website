@@ -1,16 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Dropdown({ navItem }) {
   let navigate = useNavigate();

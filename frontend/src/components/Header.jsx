@@ -25,27 +25,27 @@ const navItems = [
       {
         name: "Poverty Alleviation",
         description: "Get a better understanding of your traffic",
-        href: "#",
+        href: "/what-we-do/poverty-alleviation",
       },
       {
         name: "Humankind",
         description: "Speak directly to your customers",
-        href: "#",
+        href: "/humankind",
       },
       {
         name: "Women and children health",
         description: "Your customers’ data will be safe and secure",
-        href: "#",
+        href: "/what-we-do/women-and-children",
       },
       {
         name: "Womankind",
         description: "Connect with third-party tools",
-        href: "#",
+        href: "/womankind",
       },
       {
         name: "Emergencies",
         description: "Build strategic funnels that will convert",
-        href: "#",
+        href: "/emergencies",
       },
     ],
   },
@@ -57,12 +57,12 @@ const navItems = [
       {
         name: "Donate",
         description: "Get a better understanding of your traffic",
-        href: "#",
+        href: "/donate",
       },
       {
         name: "Volunteer",
         description: "Speak directly to your customers",
-        href: "#",
+        href: "/volunteer",
       },
     ],
   },
@@ -74,7 +74,7 @@ const navItems = [
       {
         name: "Syria Crisis",
         description: "Get a better understanding of your traffic",
-        href: "#",
+        href: "/emergencies/syria-crysis",
       },
     ],
   },
@@ -86,17 +86,17 @@ const navItems = [
       {
         name: "Who we are",
         description: "Get a better understanding of your traffic",
-        href: "#",
+        href: "/about-us/who-we-are",
       },
       {
         name: "Volunteer",
         description: "Speak directly to your customers",
-        href: "#",
+        href: "/volunteer",
       },
       {
         name: "Who we work with",
         description: "Your customers’ data will be safe and secure",
-        href: "#",
+        href: "/about-us/who-we-work-with",
       },
     ],
   },
@@ -129,7 +129,7 @@ export default function Header() {
               name="full_name"
               type="text"
             />
-            <a href="#">
+            <a href="/search">
               <MagnifyingGlassIcon
                 aria-hidden="true"
                 className="h-3/4 flex-none lg:flex border border-black text-black bg-white hover:border-[--maroon] hover:text-[--maroon] m-2 rounded"
@@ -137,7 +137,7 @@ export default function Header() {
             </a>
           </div>
           <a
-            href="#"
+            href="/donate"
             className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
           >
             DONATE
@@ -149,7 +149,7 @@ export default function Header() {
         className="mx-auto flex max-w-8xl items-center justify-between lg:justify-center p-0 lg:px-8 border-t border-black"
       >
         <div className="lg:hidden flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt=""
@@ -160,7 +160,7 @@ export default function Header() {
         </div>
         <div className="flex lg:hidden lg:justify-end">
           <a
-            href="#"
+            href="/donate"
             className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
           >
             DONATE
@@ -246,7 +246,7 @@ export default function Header() {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/donate"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   DONATE

@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import Emergencies from "./components/Emergencies";
 import AboutUs from "./components/AboutUs";
+import PovertyAlleviation from "./components/PovertyAlleviation";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route
+          path="/what-we-do/poverty-alleviation"
+          element={<PovertyAlleviation />}
+        />
         <Route path="/how-you-can-help" element={<HowYouCanHelp />} />
         <Route path="/emergencies" element={<Emergencies />} />
         <Route path="/about-us" element={<AboutUs />} />

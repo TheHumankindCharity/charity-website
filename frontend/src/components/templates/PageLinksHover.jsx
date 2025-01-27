@@ -21,7 +21,7 @@ export default function PageLinksHover({ children, pageLinksList }) {
               </div>
             </div>
 
-            <h3 className="text-lg font-semibold min-w-32 text-center text-black group-hover:text-[--maroon] transition-colors duration-300 group cursor-pointer mt-3">
+            <h3 className="text-lg font-semibold min-w-32 text-center text-black group-hover:text-[--maroon] transition-colors duration-300 cursor-pointer mt-3">
               {pageLink.name}
             </h3>
           </a>
