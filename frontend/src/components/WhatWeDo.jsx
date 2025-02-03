@@ -21,7 +21,7 @@ export default function WhatWeDo() {
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle>WHAT WE DO</PageTitle>
-      <PageSubTitle>THIS IS WHAT WE DO</PageSubTitle>
+      <PageSubTitle>WHAT WE DO</PageSubTitle>
       <PageText>{whatWeDoText}</PageText>
       <PageLinksHover pageLinksList={whatWeDoLinks}>
         CLICK TO FIND OUT MORE

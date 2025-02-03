@@ -53,6 +53,9 @@ export default function HowYouCanHelp() {
         />
         Your browser does not support the video tag.
       </video>
+      <div className="flex justify-center">
+        <hr className="w-3/4 mt-10 mb-2 border-t-2 border-[--maroon]" />
+      </div>
     </div>
   );
 }

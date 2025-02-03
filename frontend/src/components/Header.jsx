@@ -104,9 +104,10 @@ const navItems = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // const [buttonType, setButtonType] = useState("submit");
 
   return (
-    <header className="fixed w-screen bg-white border-b border-black z-[1]">
+    <header className="fixed w-screen bg-white border-b border-gray-400 z-[1]">
       <nav
         aria-label="Global"
         className="hidden lg:flex py-0 mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8"
@@ -123,19 +124,22 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <div className="lg:flex lg:flex-1 lg:justify-center border border-black grow">
-            <Input
-              className="hidden  lg:block flex-1 text-black px-1 focus:outline-none"
-              name="full_name"
-              type="text"
-            />
-            <a href="/search">
+          <form className="hidden lg:flex lg:flex-1 lg:flex-row-reverse lg:justify-start my-3 mr-5">
+            <button
+              className="peer group p-2 hover:bg-[--maroon]"
+              type="button"
+            >
               <MagnifyingGlassIcon
                 aria-hidden="true"
-                className="h-3/4 flex-none lg:flex border border-black text-black bg-white hover:border-[--maroon] hover:text-[--maroon] m-2 rounded"
+                className="h-full flex-none lg:block text-[--maroon] group-hover:text-white group-hover:bg-[--maroon] rounded"
               />
-            </a>
-          </div>
+            </button>
+            <Input
+              className="peer relative lg:invisible text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out focus:outline-none w-0 focus:w-full focus:visible peer-focus:w-full peer-focus:visible"
+              type="text"
+              placeholder="Search..."
+            />
+          </form>
           <a
             href="/donate"
             className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
@@ -146,7 +150,7 @@ export default function Header() {
       </nav>
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-8xl items-center justify-between lg:justify-center p-0 lg:px-8 border-t border-black"
+        className="mx-auto flex max-w-8xl items-center justify-between lg:justify-center p-0 lg:px-8 border-t border-gray-400"
       >
         <div className="lg:hidden flex lg:flex-1">
           <a href="/home" className="-m-1.5 p-1.5">

@@ -1,7 +1,7 @@
 import { Button } from "@headlessui/react";
-import PageSubTitle from "./templates/PageSubTitle";
-import PageText from "./templates/PageText";
-import PageTitle from "./templates/PageTitle";
+import PageSubTitle from "../templates/PageSubTitle";
+import PageText from "../templates/PageText";
+import PageTitle from "../templates/PageTitle";
 
 export default function PovertyAlleviation() {
   return (

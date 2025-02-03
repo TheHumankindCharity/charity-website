@@ -9,7 +9,10 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import Emergencies from "./components/Emergencies";
 import AboutUs from "./components/AboutUs";
-import PovertyAlleviation from "./components/PovertyAlleviation";
+import PovertyAlleviation from "./components/subpages/PovertyAlleviation";
+import Humankind from "./components/subpages/Humankind";
+import WomenAndChildrenHealth from "./components/subpages/WomenAndChildrenHealth";
+import Womankind from "./components/subpages/Womankind";
 
 function App() {
   return (
@@ -24,6 +27,12 @@ function App() {
           path="/what-we-do/poverty-alleviation"
           element={<PovertyAlleviation />}
         />
+        <Route path="/humankind" element={<Humankind />} />
+        <Route
+          path="/what-we-do/women-and-children"
+          element={<WomenAndChildrenHealth />}
+        />
+        <Route path="/womankind" element={<Womankind />} />
         <Route path="/how-you-can-help" element={<HowYouCanHelp />} />
         <Route path="/emergencies" element={<Emergencies />} />
         <Route path="/about-us" element={<AboutUs />} />
