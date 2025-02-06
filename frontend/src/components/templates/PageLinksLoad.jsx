@@ -12,15 +12,15 @@ export default function PageLinksLoad({ children, pageLinksList }) {
             className="group transition-colors duration-300 cursor-pointer"
           >
             <img
-              src="https://placehold.co/600x400/000000/FFF"
-              className="h-42 w-full rounded-t-lg border border-black bg-gray-200 object-cover xl:aspect-[7/8] mb-0"
+              src={`/images/squares-and-circles/${pageLink.img}`}
+              className="max-h-72 w-full rounded-t-lg border border-black bg-gray-200 object-cover xl:aspect-[7/8] mb-0"
             />
 
             <h3 className="text-lg font-semibold rounded-b-lg border border-black min-w-32 text-center relative overflow-hidden text-black group-hover:text-white transition-colors duration-300 group cursor-pointer mt-0 z-[-1]">
               {pageLink.name}
               <span
                 aria-hidden="true"
-                className="bg-red-700 absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 z-[-1]"
+                className="bg-[--maroon] absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 z-[-1]"
               ></span>
             </h3>
           </a>

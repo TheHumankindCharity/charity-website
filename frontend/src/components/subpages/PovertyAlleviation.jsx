@@ -4,9 +4,10 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function PovertyAlleviation() {
+  const imgUrl = "banners/poverty-alleviation.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle>POVERTY ALLEVIATION</PageTitle>
+      <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu diam
         quis urna maximus pharetra. Sed euismod, lectus sit amet fringilla
@@ -37,7 +38,7 @@ export default function PovertyAlleviation() {
         Nunc imperdiet rhoncus porttitor. Duis suscipit ultricies nunc.
       </PageText>
       <div>
-        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-red-500">
+        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-[--maroon]">
           DONATE TO OUR EMERGENCY FUND
         </Button>
       </div>

@@ -4,9 +4,10 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function WomenAndChildrenHealth() {
+  const imgUrl = "banners/women-and-children.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle>WOMEN AND CHILDREN HEALTH</PageTitle>
+      <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu diam
         quis urna maximus pharetra. Sed euismod, lectus sit amet fringilla

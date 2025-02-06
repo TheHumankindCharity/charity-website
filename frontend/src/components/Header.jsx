@@ -142,7 +142,7 @@ export default function Header() {
           </form>
           <a
             href="/donate"
-            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
+            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-[--maroon]"
           >
             DONATE
           </a>
@@ -165,7 +165,7 @@ export default function Header() {
         <div className="flex lg:hidden lg:justify-end">
           <a
             href="/donate"
-            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-600"
+            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-[--maroon]"
           >
             DONATE
           </a>
@@ -255,6 +255,22 @@ export default function Header() {
                 >
                   DONATE
                 </a>
+                <form className="flex lg:hidden justify-start my-3 mr-5">
+                  <button
+                    className="peer group p-2 hover:bg-[--maroon]"
+                    type="button"
+                  >
+                    <MagnifyingGlassIcon
+                      aria-hidden="true"
+                      className="h-full flex-none lg:block text-[--maroon] group-hover:text-white group-hover:bg-[--maroon] rounded"
+                    />
+                  </button>
+                  <Input
+                    className="peer relative invisible text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out focus:outline-none w-0 focus:w-full focus:visible peer-focus:w-full peer-focus:visible"
+                    type="text"
+                    placeholder="Search..."
+                  />
+                </form>
               </div>
             </div>
           </div>

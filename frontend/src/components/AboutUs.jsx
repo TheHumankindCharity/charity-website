@@ -5,14 +5,19 @@ import PageTitle from "./templates/PageTitle";
 
 export default function () {
   const aboutUsLinks = [
-    { name: "WHO WE ARE", href: "#", img: "" },
-    { name: "WHO WE WORK WITH", href: "#", img: "" },
-    { name: "CONTACT US", href: "#", img: "" },
-    { name: "VOLUNTEER", href: "#", img: "" },
+    { name: "WHO WE ARE", href: "who-we-are", img: "who-we-are.png" },
+    {
+      name: "WHO WE WORK WITH",
+      href: "who-we-work-with",
+      img: "who-we-work-with.png",
+    },
+    { name: "CONTACT US", href: "contact-us", img: "contact-us.png" },
+    { name: "VOLUNTEER", href: "volunteer", img: "volunteer.png" },
   ];
+  const imgUrl = "banners/about-us.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle>ABOUT US</PageTitle>
+      <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageSubTitle>ABOUT US</PageSubTitle>
       <PageText>
         At The Humankind Charity, we believe that kindness is the key to making

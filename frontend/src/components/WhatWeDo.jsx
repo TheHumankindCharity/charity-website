@@ -10,17 +10,22 @@ export default function WhatWeDo() {
     {
       name: "POVERTY ALLEVIATION",
       href: "/what-we-do/poverty-alleviation",
-      img: "",
+      img: "poverty-alleviation.png",
     },
-    { name: "HUMANKIND", href: "#", img: "" },
-    { name: "WOMAN AND CHILDREN HEALTH", href: "#", img: "" },
-    { name: "WOMANKIND", href: "#", img: "" },
-    { name: "EMERGENCIES", href: "#", img: "" },
+    { name: "HUMANKIND", href: "humankind", img: "humankind.png" },
+    {
+      name: "WOMAN AND CHILDREN HEALTH",
+      href: "women-and-children",
+      img: "women-and-children.png",
+    },
+    { name: "WOMANKIND", href: "womankind", img: "womankind.png" },
+    { name: "EMERGENCIES", href: "emergencies", img: "emergencies.png" },
   ];
+  const imgUrl = "banners/what-we-do.png";
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle>WHAT WE DO</PageTitle>
+      <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageSubTitle>WHAT WE DO</PageSubTitle>
       <PageText>{whatWeDoText}</PageText>
       <PageLinksHover pageLinksList={whatWeDoLinks}>

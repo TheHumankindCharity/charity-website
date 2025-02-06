@@ -1,8 +1,12 @@
 export default function Footer() {
   const footerLinks = [
-    { name: "WHAT WE DO", href: "#", img: "" },
-    { name: "EVENTS AND FUNDRAISERS", href: "#", img: "" },
-    { name: "EMERGENCIES", href: "#", img: "" },
+    { name: "WHAT WE DO", href: "/what-we-do", img: "what-we-do.png" },
+    {
+      name: "EVENTS AND FUNDRAISERS",
+      href: "/events-and-fundraisers",
+      img: "events-and-fundraisers.png",
+    },
+    { name: "EMERGENCIES", href: "/emergencies", img: "emergencies.png" },
   ];
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
@@ -17,10 +21,10 @@ export default function Footer() {
             className="group transition-colors duration-300 cursor-pointer"
           >
             <img
-              src="https://placehold.co/600x400"
-              className="aspect-square w-full rounded-full border border-gray-400 bg-gray-200 object-cover group-hover:border-red-700 transition-colors duration-300 xl:aspect-[7/8] mb-0"
+              src={`/images/squares-and-circles/${footerLink.img}`}
+              className="aspect-square w-full rounded-full border border-gray-400 bg-gray-200 object-cover group-hover:border-[--maroon] transition-colors duration-300 xl:aspect-[7/8] mb-0"
             />
-            <h3 className="mt-4 text-lg text-black text-center font-semibold group-hover:text-red-700 transition-colors duration-300">
+            <h3 className="mt-4 text-lg text-black text-center font-semibold group-hover:text-[--maroon] transition-colors duration-300">
               {footerLink.name}
             </h3>
           </a>

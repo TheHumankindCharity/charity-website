@@ -4,11 +4,10 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function Humankind() {
+  const imgUrl = "banners/humankind.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle>
-        HUMAN<span className="text-[--maroon]">KIND</span>
-      </PageTitle>
+      <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu diam
         quis urna maximus pharetra. Sed euismod, lectus sit amet fringilla

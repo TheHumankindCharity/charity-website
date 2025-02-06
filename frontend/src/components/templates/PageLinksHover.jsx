@@ -13,7 +13,7 @@ export default function PageLinksHover({ children, pageLinksList }) {
           >
             <div className="bg-black relative flex justify-center">
               <img
-                src="images/charity-logo-alt.png"
+                src={`/images/squares-and-circles/${pageLink.img}`}
                 className="aspect-square w-full border-2 border-black group-hover:border-[--maroon] group-hover:opacity-50 duration-300 bg-gray-200 object-cover xl:aspect-[7/8] mb-0"
               />
               <div class="opacity-0 group-hover:opacity-100 duration-300 absolute top-20 translate-y-full group-hover:translate-y-1 transition-transform z-[0] text-md text-gray-200 font-semibold">

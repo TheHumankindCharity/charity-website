@@ -8,13 +8,14 @@ import CampaignSection from "./templates/CampaignSection";
 export default function Emergencies() {
   const emergenciesText =
     "Our Emergency Fund enables us to respond swiftly to crises, providing immediate relief to families and communities in need. From food and clean water to essential hygiene supplies, your contributions help save lives and bring hope to those facing unimaginable hardships. Together, we can act quickly to make a difference when it matters most.";
+  const imgUrl = "banners/emergencies.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle>EMERGENCIES</PageTitle>
+      <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageSubTitle>OUR EMERGENCY FUND</PageSubTitle>
       <PageText>{emergenciesText}</PageText>
       <div>
-        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-red-500">
+        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-[--maroon]">
           DONATE TO OUR EMERGENCY FUND
         </Button>
       </div>

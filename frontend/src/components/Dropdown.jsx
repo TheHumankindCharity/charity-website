@@ -24,12 +24,12 @@ export default function Dropdown({ navItem }) {
         }}
         className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 py-4 focus:outline-none"
       >
-        <span className={showPopover ? "text-red-700" : ""}>
+        <span className={showPopover ? "text-[--maroon]" : ""}>
           {navItem.name}
         </span>
         <ChevronDownIcon
           aria-hidden="true"
-          className="size-5 flex-none text-red-700"
+          className="size-5 flex-none text-[--maroon]"
         />
       </PopoverButton>
 
@@ -38,7 +38,7 @@ export default function Dropdown({ navItem }) {
           anchor="bottom start"
           static={true}
           transition
-          className="absolute mt-0 top-full z-10 w-screen max-w-sm overflow-hidden bg-white border-b-4 border-red-700"
+          className="absolute mt-0 top-full z-10 w-screen max-w-sm overflow-hidden bg-white border-b-4 border-[--maroon]"
         >
           <div className="grid grid-cols-7 divide-x m-8">
             <div className="p-4 col-span-3 flex flex-col justify-start">
@@ -46,9 +46,15 @@ export default function Dropdown({ navItem }) {
                 {navItem.name}
               </h2>
               <div className="text-end mt-5">
-                <Link className="text-2xl text-red-700 hover:text-red-400">
+                <PopoverButton
+                  onClick={() => {
+                    navigate(navItem.href);
+                    setShowPopover(false);
+                  }}
+                  className="text-2xl text-[--maroon] hover:text-red-600"
+                >
                   Discover more
-                </Link>
+                </PopoverButton>
               </div>
             </div>
             <div className="col-span-4 grid grid-rows-3 grid-cols-2 grid-flow-col px-32 border-none">
