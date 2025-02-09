@@ -17,8 +17,7 @@ export default function () {
   const imgUrl = "banners/about-us.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl}></PageTitle>
-      <PageSubTitle>ABOUT US</PageSubTitle>
+      <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
       <PageText>
         At The Humankind Charity, we believe that kindness is the key to making
         the world a better place. The word "Humankind" represents all of us,

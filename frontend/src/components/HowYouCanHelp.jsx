@@ -25,7 +25,7 @@ export default function HowYouCanHelp() {
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl}></PageTitle>
+      <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
       <PageSubTitle>HOW YOU CAN STAND WITH HUMANKIND</PageSubTitle>
       <PageText>{howYouCanHelpText}</PageText>
       <PageLinksLoad pageLinksList={howYouCanHelpLinks}>

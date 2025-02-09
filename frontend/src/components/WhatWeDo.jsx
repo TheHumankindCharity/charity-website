@@ -25,8 +25,7 @@ export default function WhatWeDo() {
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl}></PageTitle>
-      <PageSubTitle>WHAT WE DO</PageSubTitle>
+      <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
       <PageText>{whatWeDoText}</PageText>
       <PageLinksHover pageLinksList={whatWeDoLinks}>
         CLICK TO FIND OUT MORE

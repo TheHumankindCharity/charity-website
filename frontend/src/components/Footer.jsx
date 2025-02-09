@@ -18,11 +18,11 @@ export default function Footer() {
           <a
             key={index}
             href={footerLink.href}
-            className="group transition-colors duration-300 cursor-pointer"
+            className="group transition-colors duration-300 cursor-pointer w-32 justify-self-center"
           >
             <img
               src={`/images/squares-and-circles/${footerLink.img}`}
-              className="aspect-square w-full rounded-full border border-gray-400 bg-gray-200 object-cover group-hover:border-[--maroon] transition-colors duration-300 xl:aspect-[7/8] mb-0"
+              className="aspect-square w-full rounded-full border border-gray-400 bg-gray-200 object-cover group-hover:border-[--maroon] transition-colors duration-300 mb-0"
             />
             <h3 className="mt-4 text-lg text-black text-center font-semibold group-hover:text-[--maroon] transition-colors duration-300">
               {footerLink.name}

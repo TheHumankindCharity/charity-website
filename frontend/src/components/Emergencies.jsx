@@ -11,7 +11,7 @@ export default function Emergencies() {
   const imgUrl = "banners/emergencies.png";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl}></PageTitle>
+      <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
       <PageSubTitle>OUR EMERGENCY FUND</PageSubTitle>
       <PageText>{emergenciesText}</PageText>
       <div>

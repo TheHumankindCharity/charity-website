@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl}></PageTitle>
+      <PageTitle imgUrl={imgUrl} bgColor="red"></PageTitle>
       <PageSubTitle>
         WELCOME TO THE HUMAN<span className="text-[--maroon]">KIND</span>{" "}
         CHARITY
