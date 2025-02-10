@@ -141,7 +141,7 @@ export default function Header() {
           </form>
           <a
             href="/donate"
-            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-[--maroon]"
+            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-700"
           >
             DONATE
           </a>
@@ -164,7 +164,7 @@ export default function Header() {
         <div className="flex lg:hidden lg:justify-end">
           <a
             href="/donate"
-            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-[--maroon]"
+            className="text-sm/2 font-semibold bg-[--maroon] p-5 text-white hover:bg-red-700"
           >
             DONATE
           </a>
