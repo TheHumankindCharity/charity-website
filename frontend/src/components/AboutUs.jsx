@@ -11,8 +11,8 @@ export default function () {
       href: "who-we-work-with",
       img: "who-we-work-with.png",
     },
-    { name: "CONTACT US", href: "contact-us", img: "contact-us.png" },
     { name: "VOLUNTEER", href: "volunteer", img: "volunteer.png" },
+    { name: "CONTACT US", href: "contact-us", img: "contact-us.png" },
   ];
   const imgUrl = "banners/about-us.png";
   return (

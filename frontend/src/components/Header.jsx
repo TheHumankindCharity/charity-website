@@ -56,12 +56,14 @@ const navItems = [
     dropdownItems: [
       {
         name: "Donate",
-        description: "Get a better understanding of your traffic",
         href: "/donate",
       },
       {
+        name: "Events and fundraising",
+        href: "/events-and-fundraisers",
+      },
+      {
         name: "Volunteer",
-        description: "Speak directly to your customers",
         href: "/volunteer",
       },
     ],
@@ -85,19 +87,16 @@ const navItems = [
     dropdownItems: [
       {
         name: "Who we are",
-        description: "Get a better understanding of your traffic",
         href: "/about-us/who-we-are",
-      },
-      {
-        name: "Volunteer",
-        description: "Speak directly to your customers",
-        href: "/volunteer",
+        img: "who-we-are.png",
       },
       {
         name: "Who we work with",
-        description: "Your customers’ data will be safe and secure",
         href: "/about-us/who-we-work-with",
+        img: "who-we-work-with.png",
       },
+      { name: "Volunteer", href: "/volunteer", img: "volunteer.png" },
+      { name: "Contact us", href: "/contact-us", img: "contact-us.png" },
     ],
   },
 ];

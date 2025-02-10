@@ -1,12 +1,9 @@
-import { Button } from "@headlessui/react";
-
 export default function CampaignSection({ children, titleLogo }) {
   return (
     <>
-      <img
-        src={`images/${titleLogo}`}
-        className="max-w-fit mx-12 md:mx-52 lg:mx-80"
-      />
+      <div className="mx-12 md:mx-52 lg:mx-80">
+        <img src={`images/${titleLogo}`} className="aspect-auto" />
+      </div>
       <div className="grid lg:grid-cols-2 gap-6 m-10 items-start">
         <div className="text-black h-100 flex justify-center">
           <img src="https://placehold.co/600x400" />
@@ -17,9 +14,9 @@ export default function CampaignSection({ children, titleLogo }) {
           </div>
         </div>
         <div>
-          <Button className="rounded p-2 mx-12 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-red-500">
+          <button className="rounded p-2 mx-12 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] hover:bg-[--maroon] hover:text-white active:bg-red-700">
             DONATE TO OUR EMERGENCY FUND
-          </Button>
+          </button>
         </div>
       </div>
     </>

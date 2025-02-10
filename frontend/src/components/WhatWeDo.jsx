@@ -8,18 +8,18 @@ export default function WhatWeDo() {
     "At The Humankind Charity, we believe kindness is the key to a better world. United by compassion, we stand together as one humankind, offering hope, help, and solidarity to those in need. Through your support - whether it's a donation, volunteering, or sharing our mission - we create a ripple of change, providing warmth and dignity to those facing hardship. Together, we can make a meaningful impact and restore hope to those who need it most.";
   const whatWeDoLinks = [
     {
-      name: "POVERTY ALLEVIATION",
+      name: "Poverty Alleviation",
       href: "/what-we-do/poverty-alleviation",
       img: "poverty-alleviation.png",
     },
-    { name: "HUMANKIND", href: "humankind", img: "humankind.png" },
+    { name: "Humankind", href: "/humankind", img: "humankind.png" },
     {
-      name: "WOMAN AND CHILDREN HEALTH",
-      href: "women-and-children",
+      name: "Woman and Children Health",
+      href: "/what-we-do/women-and-children",
       img: "women-and-children.png",
     },
-    { name: "WOMANKIND", href: "womankind", img: "womankind.png" },
-    { name: "EMERGENCIES", href: "emergencies", img: "emergencies.png" },
+    { name: "Womankind", href: "/womankind", img: "womankind.png" },
+    { name: "Emergencies", href: "/emergencies", img: "emergencies.png" },
   ];
   const imgUrl = "banners/what-we-do.png";
 

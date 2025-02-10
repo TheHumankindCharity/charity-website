@@ -1,7 +1,7 @@
-import { Button } from "@headlessui/react";
 import PageSubTitle from "../templates/PageSubTitle";
 import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
+import { Link } from "react-router";
 
 export default function PovertyAlleviation() {
   const imgUrl = "banners/poverty-alleviation.png";
@@ -9,21 +9,28 @@ export default function PovertyAlleviation() {
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu diam
-        quis urna maximus pharetra. Sed euismod, lectus sit amet fringilla
-        aliquet, leo nunc tristique quam, ac scelerisque mi lacus non nibh.
-        Fusce molestie mattis tristique. Maecenas in nisi cursus, tincidunt
-        magna ac, scelerisque erat. Aliquam euismod erat mollis lorem sagittis,
-        in ornare ipsum facilisis. Vivamus ut vehicula justo. Maecenas tincidunt
-        tempor maximus. Nam sem ex, commodo at imperdiet in, eleifend eget enim.
-        Aenean sed metus fermentum, consectetur urna et, commodo magna. Praesent
-        posuere eros nec erat accumsan, sit amet venenatis libero vulputate.
+        At The Humankind Charity, our Humankind Campaign is driven by the belief
+        that kindness can transform lives. Focusing on the struggle to secure
+        basic human needs, we work tirelessly to alleviate the pain of hunger
+        and thirst faced by countless families, children, and babies. Through
+        the generosity donations from Humankind, we provide essential aid such
+        as nutritious food, clean water, and other vital resources to those in
+        crisis, giving them a chance to survive and thrive despite unimaginable
+        hardships.
+        <br />
+        <br />
+        Your contributions make an immediate and tangible difference, offering a
+        lifeline to people living in extreme poverty. With your help, we can
+        ensure that families receive the nourishment and care they need to see
+        another day free from starvation and the devastating effects of water
+        scarcity. Together, through compassion and generosity, we can bring hope
+        to those most in need and create a future where no one must face such
+        struggles alone.
       </PageText>
       <PageSubTitle>CLICK HERE TO FIND OUT MORE ABOUT</PageSubTitle>
-      <img
-        src={`/images/humankind-logo.png`}
-        className="mx-20 md:mx-52 lg:mx-96"
-      />
+      <Link to="/humankind" className="mx-20 md:mx-52 lg:mx-96">
+        <img src={`/images/humankind-logo.png`} className="aspect-auto" />
+      </Link>
       <PageSubTitle>CAMPAIGN</PageSubTitle>
       <div className="flex justify-center">
         <hr className="w-52 mt-10 mb-2 border-t-2 border-[--maroon]" />
@@ -38,9 +45,9 @@ export default function PovertyAlleviation() {
         Nunc imperdiet rhoncus porttitor. Duis suscipit ultricies nunc.
       </PageText>
       <div>
-        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-[--maroon]">
+        <button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] hover:bg-[--maroon] hover:text-white active:bg-red-700">
           DONATE TO OUR EMERGENCY FUND
-        </Button>
+        </button>
       </div>
     </div>
   );

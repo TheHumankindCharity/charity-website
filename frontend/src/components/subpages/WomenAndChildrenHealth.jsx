@@ -1,7 +1,7 @@
-import { Button } from "@headlessui/react";
 import PageSubTitle from "../templates/PageSubTitle";
 import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
+import { Link } from "react-router";
 
 export default function WomenAndChildrenHealth() {
   const imgUrl = "banners/women-and-children.png";
@@ -9,21 +9,28 @@ export default function WomenAndChildrenHealth() {
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu diam
-        quis urna maximus pharetra. Sed euismod, lectus sit amet fringilla
-        aliquet, leo nunc tristique quam, ac scelerisque mi lacus non nibh.
-        Fusce molestie mattis tristique. Maecenas in nisi cursus, tincidunt
-        magna ac, scelerisque erat. Aliquam euismod erat mollis lorem sagittis,
-        in ornare ipsum facilisis. Vivamus ut vehicula justo. Maecenas tincidunt
-        tempor maximus. Nam sem ex, commodo at imperdiet in, eleifend eget enim.
-        Aenean sed metus fermentum, consectetur urna et, commodo magna. Praesent
-        posuere eros nec erat accumsan, sit amet venenatis libero vulputate.
+        At The Humankind Charity, our Womenkind Campaign is a testament to the
+        importance of kindness in empowering women and supporting mothers and
+        their children. We focus on providing essential resources such as
+        sanitary pads, diapers, baby formula, and hygiene products to ensure
+        that women can maintain their health, dignity, and well-being. By
+        addressing the unique needs of women, especially in vulnerable
+        communities, we create a foundation of support for mothers and their
+        babies to thrive even in the most challenging circumstances.
+        <br />
+        <br />
+        Your generosity allows us to deliver care packages tailored to the needs
+        of women and infants, restoring dignity and hope to those who need it
+        most. Together, we can provide vital relief to mothers struggling to
+        feed and care for their children, ensuring they receive the essentials
+        to foster their families' health and resilience. Join us in being kind
+        to women and empowering them to build brighter futures for themselves
+        and their loved ones.
       </PageText>
       <PageSubTitle>CLICK HERE TO FIND OUT MORE ABOUT</PageSubTitle>
-      <img
-        src={`/images/womankind-logo-alt.png`}
-        className="mx-20 md:mx-52 lg:mx-96"
-      />
+      <Link to="/womankind" className="mx-20 md:mx-52 lg:mx-96">
+        <img src={`/images/womankind-logo.png`} className="aspect-auto" />
+      </Link>
       <PageSubTitle>CAMPAIGN</PageSubTitle>
       <div className="flex justify-center">
         <hr className="w-52 mt-10 mb-2 border-t-2 border-[--maroon]" />
@@ -38,9 +45,9 @@ export default function WomenAndChildrenHealth() {
         Nunc imperdiet rhoncus porttitor. Duis suscipit ultricies nunc.
       </PageText>
       <div>
-        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-red-500">
+        <button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] hover:bg-[--maroon] hover:text-white active:bg-red-700">
           DONATE TO OUR EMERGENCY FUND
-        </Button>
+        </button>
       </div>
     </div>
   );

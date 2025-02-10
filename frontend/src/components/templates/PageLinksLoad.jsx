@@ -1,7 +1,7 @@
 export default function PageLinksLoad({ children, pageLinksList }) {
   return (
     <>
-      <h2 className="h-64 text-3xl md:text-5xl font-semibold mx-2 my-5 h-auto py-2 text-black">
+      <h2 className="h-64 text-3xl md:text-5xl font-semibold mx-4 my-5 h-auto py-2 text-black">
         {children}
       </h2>
       <div className="grid grid-cols-1 gap-x-14 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 xl:gap-x-12 mx-24 md:mx-44 lg:mx-48">

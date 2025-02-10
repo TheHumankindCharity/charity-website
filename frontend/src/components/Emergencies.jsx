@@ -15,15 +15,15 @@ export default function Emergencies() {
       <PageSubTitle>OUR EMERGENCY FUND</PageSubTitle>
       <PageText>{emergenciesText}</PageText>
       <div>
-        <Button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] data-[hover]:bg-[--maroon] data-[hover]:text-white data-[active]:bg-[--maroon]">
+        <button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] hover:bg-[--maroon] hover:text-white active:bg-red-700">
           DONATE TO OUR EMERGENCY FUND
-        </Button>
+        </button>
       </div>
       <div className="flex justify-center">
         <hr className="w-20 mt-10 mb-2 border-t-2 border-[--maroon]" />
       </div>
       <PageSubTitle>SYRIA</PageSubTitle>
-      <CampaignSection titleLogo="humankind-logo.png">
+      <CampaignSection titleLogo="humankind-logo-syria.png">
         The people of Syria are facing overwhelming challenges as they struggle
         to secure necessities such as food and clean water. Through the
         Humankind Campaign, we are focused on addressing these critical needs by
@@ -42,7 +42,7 @@ export default function Emergencies() {
         regain their strength, and take small steps toward a brighter, more
         sustainable future.
       </CampaignSection>
-      <CampaignSection titleLogo="womankind-logo-alt.png">
+      <CampaignSection titleLogo="womankind-logo-syria.png">
         The Womenkind Campaign is dedicated to empowering the women of Syria,
         who have endured tremendous hardship and struggle daily to care for
         their children and families. We focus on providing essential resources
