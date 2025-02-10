@@ -133,7 +133,7 @@ export default function Header() {
                 className="h-full flex-none lg:block text-[--maroon] group-hover:text-white group-hover:bg-[--maroon] rounded"
               />
             </button>
-            <Input
+            <input
               className="peer relative lg:invisible text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out focus:outline-none w-0 focus:w-full focus:visible peer-focus:w-full peer-focus:visible"
               type="text"
               placeholder="Search..."
@@ -265,7 +265,7 @@ export default function Header() {
                     />
                   </button>
                   <input
-                    className="peer relative invisible text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out focus:outline-none w-0 focus:w-full focus:visible peer-focus:w-full peer-focus:visible"
+                    className="peer relative text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out w-full"
                     type="search"
                     placeholder="Search..."
                   />
