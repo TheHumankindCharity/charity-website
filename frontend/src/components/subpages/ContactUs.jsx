@@ -10,7 +10,7 @@ export default function ContactUs() {
   return (
     <div className="w-window flex flex-col justify-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>
-      <div className="grid lg:grid-cols-2 gap-1 mx-20 items-start">
+      <div className="grid lg:grid-cols-2 gap-1 mx-14 items-start">
         <div className="text-center my-10">
           <h2 className="text-xl md:text-lg font-semibold py-2 text-black mb-1">
             Get in touch with us. We would love to hear from you:
