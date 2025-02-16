@@ -4,7 +4,7 @@ import PageTitle from "../templates/PageTitle";
 import { Link } from "react-router";
 
 export default function PovertyAlleviation() {
-  const imgUrl = "banners/poverty-alleviation.png";
+  const imgUrl = "banners/poverty-alleviation.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>

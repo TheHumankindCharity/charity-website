@@ -3,22 +3,11 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function WhoWeWorkWith() {
-  const imgUrl = "banners/who-we-work-with.png";
+  const imgUrl = "banners/who-we-work-with.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>
       <PageText>
-        At The Humankind Charity, we work closely with REDACTED (REDACTED), an
-        organisation with REDACTED to communities in REDACTED. With a reach of
-        more than REDACTED, REDACTED has been instrumental in offering
-        life-saving assistance, including food, clean water, medical care, and
-        shelter, to those who need it most. Their extensive efforts on the
-        ground have helped countless families survive and rebuild, even in the
-        most challenging circumstances. We are proud to partner with such a
-        dedicated organisation, and together, we can bring much-needed support
-        to REDACTED.
-        <br />
-        <br />
         The heart of The Humankind Charity lies in the hands of our Volunteers
         we are honoured to work with, whose commitment is crucial to the success
         of our mission. Volunteering with us is not just about giving; it's
@@ -43,21 +32,6 @@ export default function WhoWeWorkWith() {
         crisis, and through their generosity, we can continue to offer vital
         support, restore dignity, and change lives for the better.
       </PageText>
-
-      <PageSubTitle>OUR EMERGENCY FUND</PageSubTitle>
-      <PageText>
-        Donec egestas vulputate elementum. In hac habitasse platea dictumst.
-        Integer cursus sit amet nulla sed ultrices. Nulla elementum lectus sem,
-        in ornare risus convallis sit amet. Integer et ultricies diam. Mauris ut
-        vulputate erat. Aenean cursus, ante a pulvinar euismod, quam justo
-        bibendum enim, ut sodales orci urna at erat. Quisque ac posuere orci.
-        Nunc imperdiet rhoncus porttitor. Duis suscipit ultricies nunc.
-      </PageText>
-      <div>
-        <button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] hover:bg-[--maroon] hover:text-white active:bg-red-700">
-          DONATE TO OUR EMERGENCY FUND
-        </button>
-      </div>
     </div>
   );
 }

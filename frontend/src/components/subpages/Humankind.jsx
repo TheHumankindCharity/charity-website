@@ -3,7 +3,7 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function Humankind() {
-  const imgUrl = "banners/humankind.png";
+  const imgUrl = "banners/humankind.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>

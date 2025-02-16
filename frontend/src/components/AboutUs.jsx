@@ -14,7 +14,7 @@ export default function () {
     { name: "VOLUNTEER", href: "volunteer", img: "volunteer.png" },
     { name: "CONTACT US", href: "contact-us", img: "contact-us.png" },
   ];
-  const imgUrl = "banners/about-us.png";
+  const imgUrl = "banners/about-us.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>

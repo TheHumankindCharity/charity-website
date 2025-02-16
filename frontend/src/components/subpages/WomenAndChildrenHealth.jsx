@@ -4,7 +4,7 @@ import PageTitle from "../templates/PageTitle";
 import { Link } from "react-router";
 
 export default function WomenAndChildrenHealth() {
-  const imgUrl = "banners/women-and-children.png";
+  const imgUrl = "banners/women-and-children.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>
@@ -28,7 +28,7 @@ export default function WomenAndChildrenHealth() {
         and their loved ones.
       </PageText>
       <PageSubTitle>CLICK HERE TO FIND OUT MORE ABOUT</PageSubTitle>
-      <Link to="/womankind" className="mx-20 md:mx-52 lg:mx-96">
+      <Link to="/womenkind" className="mx-20 md:mx-52 lg:mx-96">
         <img src={`/images/womankind-logo.png`} className="aspect-auto" />
       </Link>
       <PageSubTitle>CAMPAIGN</PageSubTitle>

@@ -3,20 +3,47 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function Volunteer() {
-  const imgUrl = "banners/volunteer.png";
+  const imgUrl = "banners/volunteer.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>
+      <PageSubTitle>TOGETHER WE STAND FOR THOSE IN NEED</PageSubTitle>
+      <div className="grid lg:grid-cols-2 gap-1 mx-14 items-start">
+        <div className="flex flex-col mb-5">
+          <button className="rounded p-2 mx-20 text-lg font-semibold text-white bg-[--maroon] border-2 border-[--maroon] hover:bg-red-700 hover:text-white active:bg-red-600">
+            APPLY TO VOLUNTEER
+          </button>
+          <span className="text-[--maroon] mt-5">
+            Volunteer today. Change tomorrow.
+          </span>
+        </div>
+        <div className="flex justify-center">
+          <div className="text-black text-justify text-md max-w-xl">
+            <span className="font-semibold">Volunteering</span> with The
+            Humankind Charity is more than just an opportunity to give back;
+            it's a chance to make a meaningful difference in the lives of those
+            who need it most. By dedicating your time and effort, you become an
+            essential part of our mission to provide support and hope to
+            vulnerable communities facing crisis. Every volunteer plays a key
+            role in helping us deliver life-saving resources such as food,
+            water, medical aid, and shelter to those in desperate need.
+            <br />
+            <br />
+            Volunteering is significant not just in this life but also in the
+            Akhira. It builds your character and places you among those who play
+            a meaningful role in the ummah. As the Prophet Muhammad ﷺ said,{" "}
+            <span className="font-semibold">
+              "The best of people are those who are most beneficial to others"
+            </span>
+            . Through acts of service, you fulfill a higher purpose, earning
+            rewards both in this world and the next, while becoming a beacon of
+            hope and compassion for others.
+          </div>
+        </div>
+      </div>
+
+      <PageSubTitle>VOLUNTEERING FOR THE HUMANKIND CHARITY</PageSubTitle>
       <PageText>
-        Volunteering with The Humankind Charity is more than just an opportunity
-        to give back; it's a chance to make a meaningful difference in the lives
-        of those who need it most. By dedicating your time and effort, you
-        become an essential part of our mission to provide support and hope to
-        vulnerable communities facing crisis. Every volunteer plays a key role
-        in helping us deliver life-saving resources such as food, water, medical
-        aid, and shelter to those in desperate need.
-        <br />
-        <br />
         Volunteering is not only about what you can give, but also about what
         you receive. The experience of volunteering with The Humankind Charity
         fosters a deeper sense of compassion, resilience, and gratitude. It
@@ -58,18 +85,17 @@ export default function Volunteer() {
         lives, including your own.
       </PageText>
 
-      <PageSubTitle>OUR EMERGENCY FUND</PageSubTitle>
-      <PageText>
-        Donec egestas vulputate elementum. In hac habitasse platea dictumst.
-        Integer cursus sit amet nulla sed ultrices. Nulla elementum lectus sem,
-        in ornare risus convallis sit amet. Integer et ultricies diam. Mauris ut
-        vulputate erat. Aenean cursus, ante a pulvinar euismod, quam justo
-        bibendum enim, ut sodales orci urna at erat. Quisque ac posuere orci.
-        Nunc imperdiet rhoncus porttitor. Duis suscipit ultricies nunc.
-      </PageText>
+      <PageSubTitle>VOLUNTEER TODAY. CHANGE TOMORROW.</PageSubTitle>
+      <video className="rounded-lg mx-12 md:mx-20 lg:mx-48" controls>
+        <source
+          src="https://docs.material-tailwind.com/demo.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
       <div>
-        <button className="rounded p-2 mx-20 text-lg font-semibold text-[--maroon] border-2 border-[--maroon] hover:bg-[--maroon] hover:text-white active:bg-red-700">
-          DONATE TO OUR EMERGENCY FUND
+        <button className="rounded p-2 mx-20 text-lg font-semibold text-white bg-[--maroon] border-2 border-[--maroon] hover:bg-red-700 hover:text-white active:bg-red-600 mt-10">
+          APPLY TO VOLUNTEER
         </button>
       </div>
     </div>

@@ -8,7 +8,7 @@ import CampaignSection from "./templates/CampaignSection";
 export default function Emergencies() {
   const emergenciesText =
     "Our Emergency Fund enables us to respond swiftly to crises, providing immediate relief to families and communities in need. From food and clean water to essential hygiene supplies, your contributions help save lives and bring hope to those facing unimaginable hardships. Together, we can act quickly to make a difference when it matters most.";
-  const imgUrl = "banners/emergencies.png";
+  const imgUrl = "banners/emergencies.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
@@ -42,7 +42,7 @@ export default function Emergencies() {
         regain their strength, and take small steps toward a brighter, more
         sustainable future.
       </CampaignSection>
-      <CampaignSection titleLogo="womankind-logo-syria.png">
+      <CampaignSection titleLogo="womenkind-logo-syria.png">
         The Womenkind Campaign is dedicated to empowering the women of Syria,
         who have endured tremendous hardship and struggle daily to care for
         their children and families. We focus on providing essential resources

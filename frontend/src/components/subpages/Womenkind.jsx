@@ -2,8 +2,8 @@ import PageSubTitle from "../templates/PageSubTitle";
 import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
-export default function Womankind() {
-  const imgUrl = "banners/womankind.png";
+export default function Womenkind() {
+  const imgUrl = "banners/womenkind.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>

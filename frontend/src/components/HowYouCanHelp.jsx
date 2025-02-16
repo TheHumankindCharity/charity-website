@@ -21,7 +21,7 @@ export default function HowYouCanHelp() {
       img: "become-a-partner.png",
     },
   ];
-  const imgUrl = "banners/how-you-can-help.png";
+  const imgUrl = "banners/how-you-can-help.jpg";
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">

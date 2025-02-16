@@ -18,10 +18,10 @@ export default function WhatWeDo() {
       href: "/what-we-do/women-and-children",
       img: "women-and-children.png",
     },
-    { name: "Womankind", href: "/womankind", img: "womankind.png" },
+    { name: "Womenkind", href: "/womenkind", img: "womenkind.png" },
     { name: "Emergencies", href: "/emergencies", img: "emergencies.png" },
   ];
-  const imgUrl = "banners/what-we-do.png";
+  const imgUrl = "banners/what-we-do.jpg";
 
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">

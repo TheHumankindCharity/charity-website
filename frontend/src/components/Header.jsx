@@ -14,7 +14,7 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import Dropdown from "./Dropdown";
-import { Link } from "react-router";
+import { Link, useNavigate, useSearchParams } from "react-router";
 
 const navItems = [
   {
@@ -38,9 +38,9 @@ const navItems = [
         href: "/what-we-do/women-and-children",
       },
       {
-        name: "Womankind",
+        name: "Womenkind",
         description: "Connect with third-party tools",
-        href: "/womankind",
+        href: "/womenkind",
       },
       {
         name: "Emergencies",
@@ -59,12 +59,16 @@ const navItems = [
         href: "/donate",
       },
       {
-        name: "Events and fundraising",
+        name: "Events and fundraisers",
         href: "/events-and-fundraisers",
       },
       {
         name: "Volunteer",
         href: "/volunteer",
+      },
+      {
+        name: "Become a partner",
+        href: "/become-a-partner",
       },
     ],
   },
@@ -74,9 +78,9 @@ const navItems = [
     href: "/emergencies",
     dropdownItems: [
       {
-        name: "Syria Crisis",
+        name: "Syrian Crisis",
         description: "Get a better understanding of your traffic",
-        href: "/emergencies/syria-crysis",
+        href: "/emergencies/syrian-crisis",
       },
     ],
   },
@@ -85,11 +89,6 @@ const navItems = [
     description: "Connect with third-party tools",
     href: "/about-us",
     dropdownItems: [
-      {
-        name: "Who we are",
-        href: "/about-us/who-we-are",
-        img: "who-we-are.png",
-      },
       {
         name: "Who we work with",
         href: "/about-us/who-we-work-with",
@@ -101,9 +100,25 @@ const navItems = [
   },
 ];
 
-export default function Header() {
+export default function Header({ setSearchResult }) {
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
   // const [buttonType, setButtonType] = useState("submit");
+
+  const handleSearchInput = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleSubmitSearch = (e) => {
+    e.preventDefault();
+    setSearchResult(searchInput);
+    navigate("/search");
+    setMobileMenuOpen(false);
+    setSearchInput("");
+  };
 
   return (
     <header className="fixed w-screen bg-white border-b border-gray-400 z-[1]">
@@ -123,10 +138,13 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <form className="hidden lg:flex lg:flex-1 lg:flex-row-reverse lg:justify-start my-3 mr-5">
+          <form
+            className="hidden lg:flex lg:flex-1 lg:flex-row-reverse lg:justify-start my-3 mr-5"
+            onSubmit={handleSubmitSearch}
+          >
             <button
               className="peer group p-2 hover:bg-[--maroon]"
-              type="button"
+              type={searchInput ? "submit" : "button"}
             >
               <MagnifyingGlassIcon
                 aria-hidden="true"
@@ -135,8 +153,10 @@ export default function Header() {
             </button>
             <input
               className="peer relative lg:invisible text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out focus:outline-none w-0 focus:w-full focus:visible peer-focus:w-full peer-focus:visible"
-              type="text"
+              type="search"
               placeholder="Search..."
+              value={searchInput}
+              onChange={handleSearchInput}
             />
           </form>
           <a
@@ -171,7 +191,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md px-2.5 text-gray-700 mx-1"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md px-2.5 text-gray-700 mx-1 outline-none"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
@@ -254,10 +274,13 @@ export default function Header() {
                 >
                   DONATE
                 </a>
-                <form className="flex lg:hidden justify-start my-3 mr-5">
+                <form
+                  className="flex lg:hidden justify-start my-3"
+                  onSubmit={handleSubmitSearch}
+                >
                   <button
-                    className="peer group p-2 hover:bg-[--maroon]"
-                    type="button"
+                    className="peer group p-2 hover:bg-[--maroon] w-11"
+                    type="submit"
                   >
                     <MagnifyingGlassIcon
                       aria-hidden="true"
@@ -265,9 +288,11 @@ export default function Header() {
                     />
                   </button>
                   <input
-                    className="peer relative text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out w-full"
+                    className="peer relative w-20 text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out outline-none w-0 focus:w-full focus:visible peer-focus:visible"
                     type="search"
                     placeholder="Search..."
+                    value={searchInput}
+                    onChange={handleSearchInput}
                   />
                 </form>
               </div>

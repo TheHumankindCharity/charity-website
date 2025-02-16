@@ -1,12 +1,16 @@
 export default function Footer() {
   const footerLinks = [
-    { name: "WHAT WE DO", href: "/what-we-do", img: "what-we-do.png" },
     {
-      name: "EVENTS AND FUNDRAISERS",
-      href: "/events-and-fundraisers",
-      img: "events-and-fundraisers.png",
+      name: "WHAT WE DO",
+      href: "/what-we-do",
+      img: "what-we-do.png",
     },
-    { name: "EMERGENCIES", href: "/emergencies", img: "emergencies.png" },
+    {
+      name: "HOW YOU CAN HELP",
+      href: "/how-you-can-help",
+      img: "how-you-can-help.png",
+    },
+    { name: "CONTACT US", href: "/contact-us", img: "contact-us.png" },
   ];
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">

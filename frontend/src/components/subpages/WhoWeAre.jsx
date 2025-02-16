@@ -3,7 +3,7 @@ import PageText from "../templates/PageText";
 import PageTitle from "../templates/PageTitle";
 
 export default function WhoWeAre() {
-  const imgUrl = "banners/who-we-are.png";
+  const imgUrl = "banners/who-we-are.jpg";
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <PageTitle imgUrl={imgUrl}></PageTitle>

@@ -8,11 +8,15 @@ export default function Home() {
     "At The Humankind Charity, we believe kindness is the key to a better world. United by compassion, we stand together as one humankind, offering hope, help, and solidarity to those in need. Through your support - whether it's a donation, volunteering, or sharing our mission - we create a ripple of change, providing warmth and dignity to those facing hardship. Together, we can make a meaningful impact and restore hope to those who need it most.";
   const homePageLinks = [
     { name: "Donate", href: "/donate", img: "donate.png" },
-    { name: "Volunteer", href: "/volunteer", img: "volunteer.png" },
-    { name: "Humankind", href: "/humankind", img: "humankind.png" },
-    { name: "Womankind", href: "/womankind", img: "womankind.png" },
     { name: "Emergencies", href: "/emergencies", img: "emergencies.png" },
-    { name: "Contact Us", href: "/contact-us", img: "contact-us.png" },
+    { name: "Volunteer", href: "/volunteer", img: "volunteer.png" },
+    {
+      name: "Events and Fundraisers",
+      href: "/events-and-fundraisers",
+      img: "events-and-fundraisers.png",
+    },
+    { name: "Humankind", href: "/humankind", img: "humankind.png" },
+    { name: "Womenkind", href: "/womenkind", img: "womenkind.png" },
   ];
   const imgUrl = "banners/will-you-stand-with-humankind.png";
 
