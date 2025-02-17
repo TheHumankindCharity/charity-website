@@ -173,7 +173,7 @@ export default function Header({ setSearchResult }) {
       >
         <div className="lg:hidden flex lg:flex-1">
           <a href="/home" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">The Humankind Charity</span>
             <img
               alt=""
               src="/images/charity-logo-alt.png"
@@ -212,11 +212,11 @@ export default function Header({ setSearchResult }) {
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="/home" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">The Humankind Charity</span>
               <img
                 alt=""
                 src="/images/charity-logo-alt.png"
-                className="h-8 w-auto"
+                className="h-14 w-auto"
               />
             </a>
             <button
@@ -288,7 +288,7 @@ export default function Header({ setSearchResult }) {
                     />
                   </button>
                   <input
-                    className="peer relative w-20 text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out outline-none w-0 focus:w-full focus:visible peer-focus:visible"
+                    className="peer relative w-24 text-black p-2 border border-gray-400 transition-all duration-300 ease-in-out outline-none w-0 focus:w-full focus:visible peer-focus:visible"
                     type="search"
                     placeholder="Search..."
                     value={searchInput}

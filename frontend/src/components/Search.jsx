@@ -5,59 +5,70 @@ import { useEffect } from "react";
 
 const searchableList = [
   {
-    name: "WHAT WE DO",
+    name: "What we do",
     href: "what-we-do",
-    img: "what-we-do.png",
+    img: "squares-and-circles/what-we-do.png",
   },
   {
-    name: "HOW YOU CAN HELP",
+    name: "How you can help",
     href: "/how-you-can-help",
-    img: "how-you-can-help.png",
+    img: "squares-and-circles/how-you-can-help.png",
   },
   {
-    name: "EMERGENCIES",
+    name: "Emergencies",
     href: "/emergencies",
-    img: "emergencies.png",
+    img: "squares-and-circles/emergencies.png",
   },
   {
-    name: "ABOUT US",
+    name: "About Us",
     href: "/about-us",
-    img: "about-us.png",
+    img: "banners/about-us.jpg",
   },
-  { name: "Donate", href: "/donate", img: "donate.png" },
-  { name: "Volunteer", href: "/volunteer", img: "volunteer.png" },
-  { name: "Humankind", href: "/humankind", img: "humankind.png" },
-  { name: "Womenkind", href: "/womenkind", img: "womenkind.png" },
-  { name: "Contact Us", href: "/contact-us", img: "contact-us.png" },
+  { name: "Donate", href: "/donate", img: "squares-and-circles/donate.png" },
+  {
+    name: "Volunteer",
+    href: "/volunteer",
+    img: "squares-and-circles/volunteer.png",
+  },
+  {
+    name: "Humankind",
+    href: "/humankind",
+    img: "squares-and-circles/humankind.png",
+  },
+  {
+    name: "Womenkind",
+    href: "/womenkind",
+    img: "squares-and-circles/womenkind.png",
+  },
+  {
+    name: "Contact Us",
+    href: "/contact-us",
+    img: "squares-and-circles/contact-us.png",
+  },
   {
     name: "Poverty Alleviation",
     href: "/what-we-do/poverty-alleviation",
-    img: "poverty-alleviation.png",
+    img: "squares-and-circles/poverty-alleviation.png",
   },
   {
     name: "Women and children health",
     href: "/what-we-do/women-and-children",
-    img: "women-and-children.png",
+    img: "squares-and-circles/women-and-children.png",
   },
   {
-    name: "Events and fundraising",
+    name: "Events and fundraisers",
     href: "/events-and-fundraisers",
-    img: "events-and-fundraisers.png",
+    img: "squares-and-circles/events-and-fundraisers.png",
   },
   {
-    name: "Syria Crisis",
-    href: "/emergencies/syria-crysis",
-    img: "syria-crysis.png",
-  },
-  {
-    name: "Who we are",
-    href: "/about-us/who-we-are",
-    img: "who-we-are.png",
+    name: "Syrian Crisis",
+    href: "/emergencies/syrian-crisis",
+    img: "charity-logo-syria.jpg",
   },
   {
     name: "Who we work with",
     href: "/about-us/who-we-work-with",
-    img: "who-we-work-with.png",
+    img: "squares-and-circles/who-we-work-with.png",
   },
 ];
 

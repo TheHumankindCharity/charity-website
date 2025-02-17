@@ -1,7 +1,7 @@
 import PageTitle from "./templates/PageTitle";
-import PageSubTitle from "./templates/PageSubTitle";
 import PageText from "./templates/PageText";
-import PageLinksHover from "./templates/PageLinksHover";
+import Footer from "./Footer";
+import PageLinksLoad from "./templates/PageLinksLoad";
 
 export default function WhatWeDo() {
   const whatWeDoText =
@@ -14,7 +14,7 @@ export default function WhatWeDo() {
     },
     { name: "Humankind", href: "/humankind", img: "humankind.png" },
     {
-      name: "Woman and Children Health",
+      name: "Women and Children",
       href: "/what-we-do/women-and-children",
       img: "women-and-children.png",
     },
@@ -22,14 +22,33 @@ export default function WhatWeDo() {
     { name: "Emergencies", href: "/emergencies", img: "emergencies.png" },
   ];
   const imgUrl = "banners/what-we-do.jpg";
+  const footerLinks = [
+    {
+      name: "WHO WE WORK WITH",
+      href: "/who-we-work-with",
+      img: "who-we-work-with.png",
+    },
+    {
+      name: "HOW YOU CAN HELP",
+      href: "/how-you-can-help",
+      img: "how-you-can-help.png",
+    },
+    { name: "CONTACT US", href: "/contact-us", img: "contact-us.png" },
+  ];
 
   return (
-    <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
-      <PageText>{whatWeDoText}</PageText>
-      <PageLinksHover pageLinksList={whatWeDoLinks}>
-        CLICK TO FIND OUT MORE
-      </PageLinksHover>
-    </div>
+    <>
+      <div className="w-window flex flex-col justify-center text-center mb-10">
+        <PageTitle imgUrl={imgUrl} bgColor="white"></PageTitle>
+        <PageText>{whatWeDoText}</PageText>
+        <PageLinksLoad
+          pageLinksList={whatWeDoLinks}
+          display="flex flex-row flex-wrap items-start justify-center"
+        >
+          CLICK TO FIND OUT MORE
+        </PageLinksLoad>
+      </div>
+      <Footer />
+    </>
   );
 }

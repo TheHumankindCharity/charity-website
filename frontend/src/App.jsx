@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import WhatWeDo from "./components/WhatWeDo";
 import HowYouCanHelp from "./components/HowYouCanHelp";
-import Footer from "./components/Footer";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import Emergencies from "./components/Emergencies";
 import AboutUs from "./components/AboutUs";
@@ -16,7 +15,6 @@ import Womenkind from "./components/subpages/Womenkind";
 import WhoWeWorkWith from "./components/subpages/WhoWeWorkWith";
 import Volunteer from "./components/subpages/Volunteer";
 import Donate from "./components/subpages/Donate";
-import WhoWeAre from "./components/subpages/WhoWeAre";
 import EventsAndFundraisers from "./components/subpages/EventsAndFundraisers";
 import ContactUs from "./components/subpages/ContactUs";
 import Search from "./components/Search";
@@ -59,7 +57,6 @@ function App() {
         <Route path="/emergencies/syrian-crisis" element={<SyrianCrisis />} />
 
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/about-us/who-we-are" element={<WhoWeAre />} />
         <Route path="/about-us/who-we-work-with" element={<WhoWeWorkWith />} />
         <Route path="/contact-us" element={<ContactUs />} />
 
@@ -68,7 +65,6 @@ function App() {
           element={<Search searchResult={searchResult} />}
         />
       </Routes>
-      <Footer />
     </>
   );
 }

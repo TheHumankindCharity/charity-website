@@ -1,9 +1,22 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
+
 export default function Footer() {
+  const [threeLinks, setThreeLinks] = useState([]);
+  const location = useLocation();
+  const { hash, pathname, search } = location;
   const footerLinks = [
     {
       name: "WHAT WE DO",
       href: "/what-we-do",
       img: "what-we-do.png",
+    },
+    { name: "EMERGENCIES", href: "/emergencies", img: "emergencies.png" },
+    { name: "VOLUNTEER", href: "/volunteer", img: "volunteer.png" },
+    {
+      name: "EVENTS AND FUNDRAISERS",
+      href: "/events-and-fundraisers",
+      img: "events-and-fundraisers.png",
     },
     {
       name: "HOW YOU CAN HELP",
@@ -12,13 +25,22 @@ export default function Footer() {
     },
     { name: "CONTACT US", href: "/contact-us", img: "contact-us.png" },
   ];
+  useEffect(() => {
+    setThreeLinks(
+      footerLinks
+        .filter((link) => link.href !== pathname)
+        .sort(() => Math.random() - 0.5)
+    );
+    setThreeLinks((currThreeLinks) => currThreeLinks.slice(0, 3));
+  }, []);
+
   return (
     <div className="w-window flex flex-col justify-center text-center mb-10">
       <h2 className="h-64 text-2xl md:text-3xl font-semibold mx-2 my-5 h-auto py-2 text-black">
         YOU MIGHT BE INTERESTED IN
       </h2>
       <div className="grid grid-cols-1 gap-x-14 gap-y-10 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mx-32 lg:mx-80 items-start">
-        {footerLinks.map((footerLink, index) => (
+        {threeLinks.map((footerLink, index) => (
           <a
             key={index}
             href={footerLink.href}

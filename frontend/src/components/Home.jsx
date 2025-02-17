@@ -1,7 +1,8 @@
 import PageTitle from "./templates/PageTitle";
 import PageSubTitle from "./templates/PageSubTitle";
 import PageText from "./templates/PageText";
-import PageLinksHover from "./templates/PageLinksHover";
+import Footer from "./Footer";
+import PageLinksLoad from "./templates/PageLinksLoad";
 
 export default function Home() {
   const homePageText =
@@ -19,19 +20,38 @@ export default function Home() {
     { name: "Womenkind", href: "/womenkind", img: "womenkind.png" },
   ];
   const imgUrl = "banners/will-you-stand-with-humankind.png";
+  const footerLinks = [
+    {
+      name: "WHAT WE DO",
+      href: "/what-we-do",
+      img: "what-we-do.png",
+    },
+    {
+      name: "HOW YOU CAN HELP",
+      href: "/how-you-can-help",
+      img: "how-you-can-help.png",
+    },
+    { name: "CONTACT US", href: "/contact-us", img: "contact-us.png" },
+  ];
 
   return (
-    <div className="w-window flex flex-col justify-center text-center mb-10">
-      <PageTitle imgUrl={imgUrl} bgColor="red"></PageTitle>
-      <PageSubTitle>
-        WELCOME TO THE HUMAN<span className="text-[--maroon]">KIND</span>{" "}
-        CHARITY
-      </PageSubTitle>
-      <PageText>{homePageText}</PageText>
-      <PageLinksHover pageLinksList={homePageLinks}>
-        HOW YOU CAN STAND WITH HUMAN
-        <span className="text-[--maroon]">KIND</span>
-      </PageLinksHover>
-    </div>
+    <>
+      <div className="w-window flex flex-col justify-center text-center mb-10">
+        <PageTitle imgUrl={imgUrl} bgColor="red"></PageTitle>
+        <PageSubTitle>
+          WELCOME TO THE HUMAN<span className="text-[--maroon]">KIND</span>{" "}
+          CHARITY
+        </PageSubTitle>
+        <PageText>{homePageText}</PageText>
+        <PageLinksLoad
+          pageLinksList={homePageLinks}
+          display="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
+        >
+          HOW YOU CAN STAND WITH HUMAN
+          <span className="text-[--maroon]">KIND</span>
+        </PageLinksLoad>
+      </div>
+      <Footer />
+    </>
   );
 }
