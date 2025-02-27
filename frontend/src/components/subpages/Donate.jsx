@@ -10,17 +10,16 @@ export default function Donate() {
       <div className="w-window flex flex-col justify-center text-center mb-10">
         <PageTitle imgUrl={imgUrl}></PageTitle>
         <PageText>
-          Donating to The Humankind Charity, whether to the Humankind Campaign
-          or the Womenkind Campaign, has a profound impact on the lives of those
-          who are on the brink of despair, living with almost nothing. Your
-          generosity provides vital resources that directly address the urgent
-          needs of people facing extreme hardship. A simple donation can deliver
-          food packages that nourish families, hygiene products that restore
-          dignity, and essentials that help women care for their children in
-          difficult circumstances. For those living in crisis, these
-          contributions are more than just material goods, they are lifelines.
-          Every donation helps to rebuild a sense of hope, offering a chance for
-          survival, recovery, and a brighter future.
+          Donating to The Humankind Charity, has a profound impact on the lives
+          of those who are on the brink of despair, living with almost nothing.
+          Your generosity provides vital resources that directly address the
+          urgent needs of people facing extreme hardship. A simple donation can
+          deliver meals and food packages that nourish families, hygiene
+          essentials that help women care for their children in difficult
+          circumstances. For those living in crisis, these contributions are
+          more than just material goods, they are lifelines. Every donation
+          helps to rebuild a sense of hope, offering a chance for survival,
+          recovery, and a brighter future.
           <br />
           <br />
           The impact of your support stretches far beyond just alleviating
@@ -30,10 +29,9 @@ export default function Donate() {
           For women, your donations ensure they have the tools to nurture their
           children and keep their families safe. For families in crisis, your
           contribution brings stability, comfort, and the knowledge that they
-          are not alone in their struggle. Your kindness creates a ripple
-          effect, transforming lives, empowering individuals, and strengthening
-          communities; showing that together, we can make a tangible difference
-          in the fight against poverty and hardship.
+          are not alone in their struggle. Your kindness can transform lives,
+          empower individuals, and strengthen communities; showing that
+          together, we can make a real difference against poverty and hardship.
         </PageText>
 
         <PageSubTitle>OUR EMERGENCY FUND</PageSubTitle>
