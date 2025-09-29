@@ -35,7 +35,7 @@ To run the project locally:
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/your-username/humankind-charity-website.git
+    git clone https://github.com/TheHumankindCharity/charity-website.git
     ```
 
 2. **Navigate into the directory**
