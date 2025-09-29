@@ -1,4 +1,4 @@
-# 🌟 The Humankind Charity Website
+# ![alt text](frontend/public/images/charity-logo-white-bg.jpg)
 
 Welcome to the official website for **The Humankind Charity** — a platform built to spread compassion, connect communities, and offer real help to those in need.
 
